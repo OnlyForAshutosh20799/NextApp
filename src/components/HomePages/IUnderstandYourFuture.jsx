@@ -1,45 +1,49 @@
-import Head from 'next/head';
+"use client";
+
+import Link from "next/link";
 
 export default function IUnderstandYourFuture() {
-    const combo = {
-        title: 'Career Success Combo',
-        subtitle: 'Your Roadmap to Professional Triumph',
-        description: 'The Career Success Combo offers 6 comprehensive PDF reports covering Career, Finance, Government Job, Business, Education and Life Forecast. Crafted with 26 years of astrological expertise our Vedic astrologers provide accurate understanding to navigate job opportunities, financial growth and educational milestones confirming your path to success is cosmically aligned.',
-        buttonText: 'Get Your Career Combo Now',
-        images: [
-            'https://duastro.com/assetsonline/bookcover/1.webp',
-            'https://duastro.com/assetsonline/bookcover/1.webp',
-            'https://duastro.com/assetsonline/bookcover/1.webp',
-            'https://duastro.com/assetsonline/bookcover/1.webp',
-            'https://duastro.com/assetsonline/bookcover/1.webp',
-            'https://duastro.com/assetsonline/bookcover/1.webp',
+  return (
+    <section className="bg-[#FFF5E9] py-12 px-20 border md:px-16 flex flex-col md:flex-row items-center justify-between gap-10 ">
+      
+      {/* Left: Images using div backgrounds */}
+      <div className="flex items-center justify-center gap-4">
+        <div
+          className="w-28 h-40 md:w-32 md:h-48 rounded-lg shadow-md bg-cover bg-center"
+          style={{ backgroundImage: "url('https://duastro.com/assetsonline/bookcover/22.webp')" }}
+        ></div>
+        <div
+          className="w-28 h-40 md:w-32 md:h-48 rounded-lg shadow-md bg-cover bg-center"
+          style={{ backgroundImage: "url('https://duastro.com/assetsonline/bookcover/23.webp')" }}
+        ></div>
+        <div
+          className="w-28 h-40 md:w-32 md:h-48 rounded-lg shadow-md bg-cover bg-center"
+          style={{ backgroundImage: "url('https://duastro.com/assetsonline/bookcover/24.webp')" }}
+        ></div>
+      </div>
 
-        ],
-    };
-
-    return (
-        <div className=" bg-[#FFF5E6] flex flex-col items-center p-6">
-            <Head>
-                <title>Understand Your Future with Our Combo Offers</title>
-            </Head>
-            <h1 className="text-4xl font-bold mb-8 text-orange-600">Understand Your Future with Our Combo Offers</h1>
-            <div className=" p-6 max-w-4xl text-center">
-                <div className="flex flex-wrap justify-center gap-4 mb-4">
-                    <div></div>
-                    {combo.images.map((img, index) => (
-                        <img key={index} src={img} alt={`${combo.title} Image ${index + 1}`} className="w-32 h-32 object-cover rounded" />
-                    ))}
-                    <div>
-                        <h2 className="text-2xl font-semibold text-gray-800 mb-2">{combo.title}</h2>
-                        <p className="text-lg text-gray-600 mb-2">{combo.subtitle}</p>
-                        <p className="text-gray-600 mb-4">{combo.description}</p>
-                        <button className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600 transition duration-300">
-                            {combo.buttonText}
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    );
+      {/* Right: Text Section */}
+      <div className="max-w-lg text-center md:text-left">
+        <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">
+          Numerology <span className="text-[#FF5722]">Combo</span>
+        </h2>
+        <p className="italic text-gray-700 mb-4">
+          Decode Your Destiny with Numbers
+        </p>
+        <p className="text-gray-600 mb-6 leading-relaxed">
+          The <strong>Numerology Combo</strong> offers 3 meaningful PDF reports
+          on <strong>Numerology</strong>, <strong>Lo Shu</strong> and{" "}
+          <strong>Life Forecast</strong>. Our expert numerologists reveal how
+          numbers shape your life path and provide power to you with numbers’
+          understanding for success.
+        </p>
+        <Link
+          href="#"
+          className="inline-block bg-[#FF5722] hover:bg-[#e64a19] text-white font-semibold px-6 py-3 rounded-lg transition duration-200"
+        >
+          Get Your Numerology Combo Now
+        </Link>
+      </div>
+    </section>
+  );
 }
