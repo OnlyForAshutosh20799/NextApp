@@ -17,7 +17,7 @@ export default function FOurUnmatchedExpertise() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FFF5E6] flex flex-col items-center justify-center p-6">
+    <div className=" bg-[#FFF5E6] flex flex-col items-center justify-center p-6">
       <Head>
         <title>Our Unmatched Expertise Team</title>
       </Head>

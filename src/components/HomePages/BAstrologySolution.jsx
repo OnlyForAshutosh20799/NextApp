@@ -24,8 +24,9 @@ export default function BAstrologySolution() {
           Check Here
         </button>
       </div>
-      <p className="text-md max-w-4xl ">
-       Duastro team of experienced astrologers brings decades of expertise to provide you with precise and meansingful predictions. Every Life Kundli and consultation is crafted with the highest accuracy and confirming you receive reliable personalised report to your needs.
+      <p className="text-md max-w-4xl text-black">
+       Duastro team of experienced astrologers brings decades of expertise to provide you with precise and meansingful predictions.
+        Every Life Kundli and consultation is crafted with the highest accuracy and confirming you receive reliable personalised report to your needs.
       </p>
     </div>
   );

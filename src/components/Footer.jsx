@@ -101,7 +101,7 @@ export default function Footer() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#454545] text-white p-6">
+        <div className=" bg-[#454545] text-white p-6">
             <header className="flex items-center justify-between flex-wrap gap-4 p-4 rounded">
                 <div className="text-left flex items-center gap-4 justify-center">
                     <div className="flex flex-col items-left justify-center">

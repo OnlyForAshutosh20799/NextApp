@@ -18,7 +18,7 @@ const blogPosts = [
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className=" flex flex-col">
       <Head>
         <title>Duastro in the News</title>
       </Head>
@@ -34,7 +34,7 @@ const blogPosts = [
     </div>
 </div>
       <div className="bg-yellow-50 py-10 px-6 text-center">
-        <h2 className="text-2xl font-bold mb-6">Latest from Blog</h2>
+        <h2 className="text-2xl font-bold mb-6 text-black">Latest from Blog</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:mx-25">
           {blogPosts.map((post, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300">
