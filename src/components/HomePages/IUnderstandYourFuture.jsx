@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function IUnderstandYourFuture() {
   return (
-    <section className="bg-[#FFF5E9] py-12 px-20 border md:px-16 flex flex-col md:flex-row items-center justify-between gap-10 ">
+    <section className="bg-[#FFF5E9] py-12 px-5 border md:px-16 flex flex-col md:flex-row items-center justify-between gap-10 ">
       
       {/* Left: Images using div backgrounds */}
       <div className="flex items-center justify-center gap-4">
@@ -24,10 +24,10 @@ export default function IUnderstandYourFuture() {
 
       {/* Right: Text Section */}
       <div className="max-w-lg text-center md:text-left">
-        <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">
+        <h2 className="text-xl md:text-3xl font-semibold text-gray-900 mb-2">
           Numerology <span className="text-[#FF5722]">Combo</span>
         </h2>
-        <p className="italic text-gray-700 mb-4">
+        <p className="text-sm italic text-gray-700 mb-4">
           Decode Your Destiny with Numbers
         </p>
         <p className="text-gray-600 mb-6 leading-relaxed">

@@ -77,7 +77,7 @@ export default function DZodiacSign() {
   ];
 
   return (
-    <div className=" bg-[#FBF1E3] py-15 px-4">
+    <div className=" bg-[#FBF1E3] py-7 md:py-15 px-4">
       <Head>
         <title>Choose Your Zodiac Sign</title>
       </Head>
@@ -94,7 +94,7 @@ export default function DZodiacSign() {
           you with 90% accuracy across all aspects of life.
         </p>
         
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-7">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-7 px-5 sm:px-0">
           {zodiacSigns.map((sign, index) => (
             <div
               key={index}
@@ -104,11 +104,11 @@ export default function DZodiacSign() {
                 <img
                   src={sign.image}
                   alt={`${sign.name} symbol`}
-                  className=""
+                  className="h-15 md:h-25"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-gray-800">{sign.name}</h3>
-              <p className="text-sm text-gray-500">{sign.dates}</p>
+              <h3 className="text-md md:text-lg font-semibold text-gray-800">{sign.name}</h3>
+              <p className="text-xs md:text-sm text-gray-500">{sign.dates}</p>
             </div>
           ))}
         </div>

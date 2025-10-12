@@ -38,9 +38,9 @@ const blogPosts = [
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:mx-25">
           {blogPosts.map((post, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300">
-              <img src={post.img} alt={post.title} className="w-full h-48 object-cover rounded-t-lg mb-2" />
-              <h3 className="text-lg font-semibold text-gray-800">{post.title}</h3>
-              <p className="text-sm text-gray-600">{post.desc}</p>
+              <img src={post.img} alt={post.title} className="w-full md:h-48 object-cover rounded-t-lg mb-2" />
+              <h3 className="text-sm md:text-lg font-semibold text-gray-800">{post.title}</h3>
+              <p className="md:text-sm text-xs text-gray-600">{post.desc}</p>
             </div>
           ))}
         </div>

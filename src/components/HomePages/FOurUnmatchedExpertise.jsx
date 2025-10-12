@@ -21,14 +21,14 @@ export default function FOurUnmatchedExpertise() {
       <Head>
         <title>Our Unmatched Expertise Team</title>
       </Head>
-      <h1 className="text-4xl font-bold mb-4 text-gray-800">Our Unmatched Expertise Team</h1>
-      <p className="text-lg mb-3 text-gray-600 text-center max-w-2xl italic">
+      <h1 className="md:text-4xl text-2xl text-center font-bold mb-4 text-gray-800">Our Unmatched Expertise Team</h1>
+      <p className="md:text-lg text-md mb-3 text-gray-600 text-center max-w-2xl italic">
         Precision, Trust and Planetary Wisdom from a World Class Team
       </p>
-      <p className="text-md mb-8 text-gray-600 text-center max-w-2xl">
+      <p className="md:text-md text-sm mb-8 text-gray-600 text-center max-w-2xl">
        With over 20 years of astrological mastery Duastro has provide power to 6 lakh lives globally with accurate Kundli readings earning a top spot on Google through 3 years of relentless dedication. Our elite team of Vedic astrologers, numerologists, KP masters, Vastu experts and palm readers blends ancient wisdom with modern understanding delivering predictions with over 95% accuracy. Trusted by clients across India and beyond we transform lives with personalised solutions for career, relationships, health and prosperity.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-30">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:mx-30">
         {experts.map((expert, index) => (
           <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-4 text-center transform hover:scale-105 transition duration-300">
             <h2 className="text-md font-semibold text-orange-600 mb-2">{expert.name}</h2>

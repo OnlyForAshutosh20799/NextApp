@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 export default function BAstrologySolution() {
   return (
-    <div className=" bg-[#FFF5E6] flex flex-col items-center justify-center text-center p-6 py-20">
+    <div className=" bg-[#FFF5E6] flex flex-col items-center justify-center text-center p-6 py-10 md:py-20">
       <Head>
         <title>Astrology Solution</title>
       </Head>

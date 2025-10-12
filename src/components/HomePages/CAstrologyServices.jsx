@@ -21,18 +21,18 @@ export default function CAstrologyServices() {
   ];
 
   return (
-    <div className="  bg-gradient-to-r from-[#FFCC33] to-[#FD8115] flex flex-col items-center p-6 py-7 md:py-12 lg:py-16">
+    <div className="  bg-gradient-to-r from-[#FFCC33] to-[#FD8115] flex flex-col items-center py-8 lg:py-16">
       <Head>
         <title>Astrology Services</title>
       </Head>
       <h1 className="text-3xl font-bold text-white mb-2"><span className='text-black'>Astrology</span> <span className='text-[#FD7E14]'>Services</span></h1>
       <p className=" mb-6 text-black">Our Horoscope Prediction Services</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-25">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-5 sm:mx-25">
         {services.map((service, index) => (
           <div key={index} className="bg-white rounded-2xl shadow-lg text-center">
-            <img src={service.img} alt={service.title} className="w-full h-32 object-cover mb-2 rounded-t-2xl" />
-            <h2 className="text-lg font-semibold text-gray-800 mt-5">{service.title}</h2>
-            <p className="text-sm text-gray-600 mb-5">{service.desc}</p>
+            <img src={service.img} alt={service.title} className="w-full h-18 md:h-32 object-cover mb-2 rounded-t-2xl" />
+            <h2 className="text-sm md:text-lg font-semibold text-gray-800 mt-2 md:mt-5">{service.title}</h2>
+            <p className="md:text-sm text-xs  text-gray-600 mb-2 md:mb-5">{service.desc}</p>
           </div>
         ))}
       </div>

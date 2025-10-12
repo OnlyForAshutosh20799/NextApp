@@ -3,8 +3,8 @@ export default function AexperienceAstrology() {
 
 
   return (
-    <div className=" bg-gradient-to-r from-[#FFCC33] to-[#FD8115] flex items-center justify-center p-6 py-20 mt-15 ">
-      <div className="text-center px-20 flex flex-col items-center juastify-center">
+    <div className=" bg-gradient-to-r from-[#FFCC33] to-[#FD8115] flex items-center justify-center p-6 md:py-20 py-10 mt-15 ">
+      <div className="text-center px-5 md:px-20 flex flex-col items-center juastify-center">
         <h1 className="text-[22px] md:text-[30px] lg:text-[45px] font-bold mb-2 text-black lg:px-40">Experience Astrology Like Never Before – The World’s Most Comprehensive Kundli.</h1>
         <p className="md:text-xl text-md lg:text-3xl font-bold mb-4 text-black ">8 Lakh Characters • 3 Lakh Words • 120 Years Coverage</p>
         <p className="md:text-lg text-sm mb-6 text-black">Fully Secured & Encrypted</p>
