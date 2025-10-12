@@ -12,6 +12,10 @@ export default function GNewsBlog() {
     { name: "English Loktej", img: "https://via.placeholder.com/150?text=English+Loktej" },
     { name: "Lokmat", img: "https://via.placeholder.com/150?text=Lokmat" },
     { name: "Google News Initiative", img: "https://via.placeholder.com/150?text=Google+News" },
+    { name: "Google News Initiative", img: "https://via.placeholder.com/150?text=Google+News" },
+    { name: "Google News Initiative", img: "https://via.placeholder.com/150?text=Google+News" },
+    { name: "Google News Initiative", img: "https://via.placeholder.com/150?text=Google+News" },
+    { name: "Google News Initiative", img: "https://via.placeholder.com/150?text=Google+News" },
   ];
 
   const blogPosts = [
@@ -36,10 +40,14 @@ export default function GNewsBlog() {
           Featured on Leading Platforms for Our Astrological Excellence
         </p>
 
-        <div className="mt-8 px-6">
+        {/* Slider Container */}
+        <div className="mt-8 px-6 relative">
           <Swiper
             modules={[Pagination, Autoplay]}
-            pagination={{ clickable: true }}
+            pagination={{
+              clickable: true,
+              el: ".custom-swiper-pagination",
+            }}
             autoplay={{ delay: 2500, disableOnInteraction: false }}
             loop={true}
             spaceBetween={20}
@@ -62,6 +70,9 @@ export default function GNewsBlog() {
               </SwiperSlide>
             ))}
           </Swiper>
+
+          {/* ✅ Pagination dots below cards */}
+          <div className="custom-swiper-pagination mt-4"></div>
         </div>
       </div>
 
@@ -87,6 +98,28 @@ export default function GNewsBlog() {
           ))}
         </div>
       </div>
+
+      {/* Custom Pagination Styling */}
+      <style jsx global>{`
+        .custom-swiper-pagination {
+          display: flex;
+          justify-content: center;
+          margin-top: 1rem;
+        }
+        .custom-swiper-pagination .swiper-pagination-bullet {
+          background: white;
+          opacity: 0.7;
+          width: 10px;
+          height: 10px;
+          margin: 0 5px;
+          transition: all 0.3s ease;
+        }
+        .custom-swiper-pagination .swiper-pagination-bullet-active {
+          background: #facc15; /* Tailwind yellow-400 */
+          opacity: 1;
+          transform: scale(1.2);
+        }
+      `}</style>
     </div>
   );
 }
