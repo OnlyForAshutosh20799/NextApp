@@ -23,7 +23,7 @@ const blogPosts = [
         <title>Duastro in the News</title>
       </Head>
      <div className="bg-yellow-400 py-6 text-center">
-    <h1 className="text-4xl font-bold text-white mb-2">Duastro in the News</h1>
+    <h1 className="md:text-3xl text-xl font-bold text-white mb-2">Duastro in the News</h1>
     <p className="text-white text-sm">Featured on Leading Platforms for Our Astrological Excellence</p>
     <div className="flex justify-center gap-6 mt-6 overflow-x-auto px-4 scrollbar-hide">
         {newsPlatforms.map((platform, index) => (

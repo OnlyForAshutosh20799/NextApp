@@ -25,7 +25,7 @@ export default function CAstrologyServices() {
       <Head>
         <title>Astrology Services</title>
       </Head>
-      <h1 className="text-3xl font-bold text-white mb-2"><span className='text-black'>Astrology</span> <span className='text-[#FD7E14]'>Services</span></h1>
+      <h1 className="text-2xl md:text-3xl font-bold text-white mb-2"><span className='text-black'>Astrology</span> <span className='text-[#FD7E14]'>Services</span></h1>
       <p className=" mb-6 text-black">Our Horoscope Prediction Services</p>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-5 sm:mx-25">
         {services.map((service, index) => (

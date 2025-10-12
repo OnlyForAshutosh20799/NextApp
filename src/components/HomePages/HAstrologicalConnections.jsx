@@ -13,7 +13,7 @@ export default function HAstrologicalConnections() {
       <Head>
         <title>Astrological Connections for Eternal Love</title>
       </Head>
-      <h1 className="md:text-3xl text-xl font-bold mb-4 text-center">Astrological Connections for <span className='text-orange-500'>Eternal Love</span></h1>
+      <h1 className="md:text-3xl text-2xl font-bold mb-4 text-center">Astrological Connections for <span className='text-orange-500'>Eternal Love</span></h1>
       <p className="text-black italic  mb-4 text-center max-w-2xl">
         Find Your Perfect Match with Duastro Expert Marriage Predictions
       </p>

@@ -83,7 +83,7 @@ export default function DZodiacSign() {
       </Head>
       
       <div className="max-w-6xl mx-auto text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+        <h1 className="md:text-3xl text-2xl font-bold text-gray-800 mb-2">
           Choose Your Zodiac<span className='text-[#FD7E14]'> Sign</span>
         </h1>
         <p className="text-base italic text-gray-600 mb-3">

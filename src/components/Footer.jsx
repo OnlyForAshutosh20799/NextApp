@@ -155,12 +155,18 @@ export default function Footer() {
                 </div>
             </section>
 
-            <main className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6 mx-20">
+            <main className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 ">
 
                 <section className=" p-4 rounded">
                     <h2 className="text-xl font-bold mb-2">Online Kundli</h2>
                     <ul className="list-disc pl-5 space-y-1">
                         {data.sections.onlineKundli.map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
+                    <h2 className="text-xl font-bold mt-4 mb-2">Combo Offer</h2>
+                    <ul className="list-disc pl-5 space-y-1">
+                        {data.sections.astrologyPrediction.loveCalculator.map((item, index) => (
                             <li key={index}>{item}</li>
                         ))}
                     </ul>
@@ -194,12 +200,13 @@ export default function Footer() {
                             <li key={index}>{item}</li>
                         ))}
                     </ul>
-                    <h2 className="text-xl font-bold mt-4 mb-2">Love Calculator</h2>
+                    <h2 className="text-xl font-bold mb-2">Combo Offer</h2>
                     <ul className="list-disc pl-5 space-y-1">
-                        {data.sections.astrologyPrediction.loveCalculator.map((item, index) => (
+                        {data.sections.astrologyPrediction.horoscopes.map((item, index) => (
                             <li key={index}>{item}</li>
                         ))}
                     </ul>
+                    
                 </section>
 
                 <section className=" p-4 rounded col-span-4 md:col-span-1">
@@ -219,22 +226,22 @@ export default function Footer() {
                         <p>{data.sections.corporateInfo.contact.phone}</p>
                         <p>{data.sections.corporateInfo.contact.whatsapp}</p>
                         <p>{data.sections.corporateInfo.contact.email}</p>
-                        <div className="flex space-x-2 mt-2">
+                        {/* <div className="flex space-x-2 mt-2">
                             {data.sections.corporateInfo.contact.social.map((src, index) => (
                                 <a key={index} href="#"><img src={src} alt={`Social ${index}`} className="h-6" /></a>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
-                    <div className=" bg-[#4F5153] flex items-center justify-center mt-5 p-2 rounded">
+                    
+                </section>
+            </main>
+            <div className=" bg-[#4F5153] flex items-center justify-center mt-5 p-2 rounded">
                         <div className=" text-white-400">
                             {data.sections.corporateInfo.ratings.map((rating, index) => (
                                 <p key={index}>{rating}</p>
                             ))}
                         </div>
                     </div>
-                </section>
-            </main>
-
             <footer className="mt-6 py-3 text-center bg-[#2A2A2A] ">
                 <p>{data.footer}</p>
             </footer>
