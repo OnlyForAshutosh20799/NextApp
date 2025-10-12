@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function IUnderstandYourFuture() {
   return (
-    <section className="bg-[#FFF5E9] py-12 px-5 border md:px-16 flex flex-col md:flex-row items-center justify-between gap-10 ">
+    <section className="bg-[#FFF5E9] py-12 px-5 md:px-16 flex flex-col md:flex-row items-center justify-between gap-10 ">
       
       {/* Left: Images using div backgrounds */}
       <div className="flex items-center justify-center gap-4">

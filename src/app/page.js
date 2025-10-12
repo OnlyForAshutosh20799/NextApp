@@ -9,6 +9,8 @@ import FOurUnmatchedExpertise from "@/components/HomePages/FOurUnmatchedExpertis
 import GNewsBlog from "@/components/HomePages/GNewsBlog";
 import HAstrologicalConnections from "@/components/HomePages/HAstrologicalConnections";
 import IUnderstandYourFuture from "@/components/HomePages/IUnderstandYourFuture";
+import JDiscoverYourCosmic from "@/components/HomePages/JDiscoverYourCosmic";
+import KFaq from "@/components/HomePages/KFaq";
 
 import Image from "next/image";
 
@@ -25,6 +27,8 @@ export default function Home() {
     <GNewsBlog />
     <HAstrologicalConnections />
     <IUnderstandYourFuture />
+    <JDiscoverYourCosmic /> 
+    <KFaq />  
     <Footer />
     </>
   );
