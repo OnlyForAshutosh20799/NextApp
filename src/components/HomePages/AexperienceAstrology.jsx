@@ -66,7 +66,7 @@ export default function AexperienceAstrology() {
         <img
           src="/assets/VastuImage.png"
           alt="Astrology Illustration"
-          className="w-[320px] md:w-[420px] lg:w-[600px] rounded-2xl shadow-2xl animate-fadeIn"
+          className="w-[380px] md:w-[420px] lg:w-[600px] rounded-2xl shadow-2xl animate-fadeIn mb-10"
         />
         {/* Golden glow behind image */}
         <div className="absolute -z-10 w-[250px] h-[250px] bg-gradient-to-r from-[#FFD700]/40 to-[#FF9933]/40 rounded-full blur-3xl"></div>
