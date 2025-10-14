@@ -47,10 +47,10 @@ export default function AexperienceAstrology() {
         </div>
 
         <div className="flex justify-center md:justify-start gap-4 mt-6 text-[#5A3E00] font-medium">
-          <span className="bg-[#FFF5E1] px-2 md:px-4 py-1 md:py-2 md:text-base text-xs rounded-full shadow-inner">
+          <span className="bg-[#FFF5E1] px-2 md:px-4 py-2 md:text-base text-xs rounded-full shadow-inner">
             🔮 Trusted by 1L+ Users
           </span>
-          <span className="bg-[#FFF5E1] px-2 md:px-4 py-1 md:py-2 md:text-base text-xs rounded-full shadow-inner">
+          <span className="bg-[#FFF5E1] px-2 md:px-4 py-2 md:text-base text-xs rounded-full shadow-inner">
             ⭐ Rated 4.9/5 by Clients
           </span>
         </div>
