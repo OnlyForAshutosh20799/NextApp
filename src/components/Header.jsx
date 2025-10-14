@@ -45,8 +45,6 @@ const navItems = [
     ],
   },
   { label: "Blog", href: "/blog" },
-  { label: "Career", href: "/career" },
-  { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -60,22 +58,22 @@ export default function Header() {
 
   return (
     <header className="w-full bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-lg fixed top-0 left-0 z-50">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div className="max-w-7xl mx-auto ">
         <div className="flex items-center justify-between h-16">
           {/* LOGO */}
           <div className="flex items-center gap-2">
-            <div className="text-3xl font-extrabold bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent">
+            <div className="text-xl md:text-2xl lg:text-3xl font-extrabold bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent">
               AstroVastuGuru
             </div>
           </div>
 
           {/* DESKTOP NAVIGATION */}
-          <nav className="hidden md:flex space-x-6 items-center">
+          <nav className="hidden md:flex  items-center">
             {navItems.map((item) => (
               <div key={item.label} className="relative group">
                 <Link
                   href={item.href}
-                  className="text-gray-800 font-semibold hover:text-[#FD7E14] px-3 py-1 flex items-center gap-1 transition-all"
+                  className="text-gray-800 text-md font-semibold hover:text-[#FD7E14] px-2 py-1 flex items-center  transition-all"
                 >
                   {item.label}
                 </Link>
@@ -101,13 +99,14 @@ export default function Header() {
             ))}
 
             {/* FREE KUNDLI BUTTON */}
+            <div className="ml-5 text-sm px-3 py-2 rounded-full text-white font-semibold  shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 flex items-center justify-center bg-gradient-to-r from-[#FD8115] to-[#FFCC33] hover:from-[#FFCC33] hover:to-[#FD8115]">
             <Link
               href="/kundli/free"
-              className="ml-4 bg-gradient-to-r from-[#FD8115] to-[#FFCC33] hover:from-[#FFCC33] hover:to-[#FD8115]
-               text-white font-semibold px-5 py-2 rounded-full shadow-lg hover:shadow-yellow-500/30 transition-all duration-300"
+             className="text-nowrap"
             >
-              🔮 Get Free Kundli
+               Get Free Kundli
             </Link>
+            </div>
           </nav>
 
           {/* MOBILE MENU BUTTON */}
@@ -128,7 +127,7 @@ export default function Header() {
 
       {/* MOBILE MENU */}
       {mobileOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-md shadow-md border-t border-gray-200">
+        <div className="lg:hidden bg-white/95 backdrop-blur-md shadow-md border-t border-gray-200">
           <div className="px-4 py-3 space-y-2">
             {navItems.map((item) => (
               <div key={item.label}>

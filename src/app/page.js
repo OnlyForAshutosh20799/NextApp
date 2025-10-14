@@ -22,7 +22,7 @@ export default function Home() {
     <BAstrologySolution />
     <CAstrologyServices />
     <DZodiacSign />
-    {/* <EDuastroMilestones /> */}
+    <EDuastroMilestones />
     <FOurUnmatchedExpertise />
     <HAstrologicalConnections />
     <GNewsBlog />    
