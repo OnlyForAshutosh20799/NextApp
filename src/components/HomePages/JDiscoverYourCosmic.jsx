@@ -36,7 +36,7 @@ export default function JDiscoverYourCosmic() {
   ];
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-[#FFCC33] via-[#FDBA4D] to-[#FD8115] flex flex-col items-center py-12 px-6 overflow-hidden">
+    <div className="relative  bg-gradient-to-br from-[#FFCC33] via-[#FDBA4D] to-[#FD8115] flex flex-col items-center py-12 px-6 overflow-hidden">
       
       {/* ✨ Animated Background Lights */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(255,255,255,0.25),transparent_70%)]"></div>
