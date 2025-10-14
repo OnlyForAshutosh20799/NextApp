@@ -13,14 +13,15 @@ export default function BAstrologySolution() {
       {/* Background glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,190,80,0.2),transparent_70%)]"></div>
 
-       {/* Title Section */}
+      {/* Title Section */}
       <motion.h1
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className=" text-2xl md:text-4xl font-extrabold text-[#3B1F00] mb-3 text-center"
       >
-        Perfect Astrology <span className="text-[#FD7E14]">  Solution for You ✨</span>
+        Perfect Astrology{" "}
+        <span className="text-[#FD7E14]"> Solution for You ✨</span>
       </motion.h1>
       <motion.p
         initial={{ opacity: 0 }}
@@ -33,9 +34,10 @@ export default function BAstrologySolution() {
         destiny with cosmic energy.
       </motion.p>
 
-      <div className="relative flex flex-col md:flex-row gap-4 mb-10">
+      {/* Selection + Button Section */}
+      <div className="relative flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 mb-10 w-full max-w-4xl">
         {/* Interest dropdown */}
-        <select className="border-2 border-[#F4B400] rounded-full px-6 py-3 bg-white text-gray-800 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all">
+        <select className="w-full h-10 border-2 border-[#F4B400] rounded-full px-4 md:px-6 text-sm md:text-base bg-white text-gray-800 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all">
           <option>Select Your Interest</option>
           <option>❤️ Love & Relationships</option>
           <option>💼 Career & Finance</option>
@@ -44,7 +46,7 @@ export default function BAstrologySolution() {
         </select>
 
         {/* Service dropdown */}
-        <select className="border-2 border-[#F4B400] rounded-full px-6 py-3 bg-white text-gray-800 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all">
+        <select className="w-full h-10 border-2 border-[#F4B400] rounded-full px-4 md:px-6 text-sm md:text-base bg-white text-gray-800 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all">
           <option>Select Service Type</option>
           <option>⚡ Express Report (Within 2 Hours)</option>
           <option>🌙 Standard Report (Within 24 Hours)</option>
@@ -52,7 +54,7 @@ export default function BAstrologySolution() {
         </select>
 
         {/* Button */}
-        <button className="bg-gradient-to-r from-[#FD8115] to-[#FFCC33] text-black font-semibold px-8 py-3 rounded-full shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300">
+        <button className="w-full h-10 bg-gradient-to-r from-[#FD8115] to-[#FFCC33] text-black font-semibold text-sm md:text-base px-6 md:px-8 rounded-full shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 whitespace-nowrap">
           Get My Report 🔮
         </button>
       </div>

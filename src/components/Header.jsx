@@ -45,7 +45,6 @@ const navItems = [
     ],
   },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
@@ -63,7 +62,7 @@ export default function Header() {
           {/* LOGO */}
           <div className="flex items-center gap-2">
             <div className="text-xl md:text-2xl lg:text-3xl font-extrabold bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent">
-              AstroVastuGuru
+             AstroVastuGuru
             </div>
           </div>
 
@@ -73,7 +72,7 @@ export default function Header() {
               <div key={item.label} className="relative group">
                 <Link
                   href={item.href}
-                  className="text-gray-800 text-md font-semibold hover:text-[#FD7E14] px-2 py-1 flex items-center  transition-all"
+                  className="text-gray-800 text-[13px] lg:text-[16px] font-semibold hover:text-[#FD7E14] px-2 py-1 flex items-center  transition-all"
                 >
                   {item.label}
                 </Link>
@@ -97,20 +96,22 @@ export default function Header() {
                 )}
               </div>
             ))}
-
-            {/* FREE KUNDLI BUTTON */}
-            <div className="ml-5 text-sm px-3 py-2 rounded-full text-white font-semibold  shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 flex items-center justify-center bg-gradient-to-r from-[#FD8115] to-[#FFCC33] hover:from-[#FFCC33] hover:to-[#FD8115]">
-            <Link
-              href="/kundli/free"
-             className="text-nowrap"
-            >
-               Get Free Kundli
-            </Link>
-            </div>
           </nav>
+          {/* FREE KUNDLI BUTTON */}
+          <div className="hidden ml-5 text-sm px-3 py-2 rounded-full text-white font-semibold  shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 md:flex items-center justify-center bg-gradient-to-r from-[#FD8115] to-[#FFCC33] hover:from-[#FFCC33] hover:to-[#FD8115]">
+            <Link href="/kundli/free" className="text-nowrap">
+              Get Free Kundli
+            </Link>
+          </div>
 
           {/* MOBILE MENU BUTTON */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center justify-center gap-3">  
+             {/* FREE KUNDLI BUTTON */}
+          <div className="text-nowrap ml-5 text-xs sm:text-sm px-3 py-1 rounded-4xl sm:rounded-full text-white font-semibold  shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 flex items-center justify-center bg-gradient-to-r from-[#FD8115] to-[#FFCC33] hover:from-[#FFCC33] hover:to-[#FD8115]">
+            <Link href="/kundli/free" className="">
+              Get Free Kundli
+            </Link>
+          </div>      
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="text-gray-800 hover:text-[#FD7E14] focus:outline-none"
@@ -121,6 +122,7 @@ export default function Header() {
                 <MenuIcon className="h-6 w-6" />
               )}
             </button>
+             
           </div>
         </div>
       </div>

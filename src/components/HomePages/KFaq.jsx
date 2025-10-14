@@ -45,7 +45,7 @@ export default function KFaq() {
       <div className="absolute top-0 left-0 w-64 h-64 bg-yellow-300/20 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl animate-pulse"></div>
 
-      <h1 className="text-4xl md:text-5xl font-extrabold text-center text-[#7F4C00] mb-10 drop-shadow-lg">
+      <h1 className="text-3xl md:text-4xl font-extrabold text-center text-[#7F4C00] mb-5 drop-shadow-lg">
         Frequently Asked Questions
       </h1>
       <p className="max-w-2xl text-center text-gray-700 mb-10 text-base md:text-lg">
