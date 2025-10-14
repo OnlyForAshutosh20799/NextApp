@@ -1,99 +1,104 @@
 "use client";
 
-import { FaStar } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { FaStar, FaGlobe, FaSun, FaMoon } from "react-icons/fa";
 
 export default function JDiscoverYourCosmic() {
   const topics = [
     {
       title: "🌞 What is Astrology?",
-      content: `Astrology is the divine science guiding your life journey. It’s the bridge between the celestial and human realms that decodes the significance of planets, stars, and constellations in shaping your destiny. Through detailed astrological analysis, Duastro offers you personalized insights into your life’s direction, strengths, and challenges. Whether it’s your health, relationships, or career, astrology helps you align with your true purpose. Connect to Discover Your Predictions in 30 sec. using our online astrology tools.`,
+      content: `Astrology bridges the cosmic and human worlds, revealing how planets and stars influence your destiny. Duastro’s expert analysis helps you uncover your life path, purpose, and hidden strengths — from love and health to wealth and destiny.`,
     },
     {
       title: "📘 Understanding Your Kundli",
-      content: `Your Kundli or birth chart acts as the mirror to your destiny. It maps the exact positions of planets and stars revealing your unique celestial blueprint. Your Kundli helps you understand what makes you who you are, what challenges you face, and how to overcome them. Duastro provides accurate online Kundli generation to help you decode your past, present, and future within seconds.`,
+      content: `Your Kundli is your celestial DNA — a blueprint of your soul at birth. Discover how each planetary position shapes your personality, emotions, and life events. Duastro’s instant online Kundli report provides deep clarity within seconds.`,
     },
     {
-      title: "💫 The Power of Horoscopes",
-      content: `Horoscopes are your daily, weekly, monthly, or yearly guides based on your zodiac sign. Usually created as per your date of birth, they reveal planetary movements affecting your life. Duastro’s free horoscope predictions help you prepare for what’s ahead and make the right choices to attract positivity and success in your life.`,
+      title: "💫 Power of Horoscopes",
+      content: `Daily, weekly, and yearly horoscopes crafted from Vedic astrology reveal the movements of the planets guiding your choices. Duastro’s predictions empower you to attract success and positivity every day.`,
     },
     {
-      title: "🌙 Nakshatras: Your Perfect Guides",
-      content: `Vedic astrology recognizes 27 Nakshatras or lunar constellations that deeply impact your Kundli. Each Nakshatra brings a unique energy shaping your personality and life path. Learn which Nakshatra rules your mind and influences your thoughts, emotions, and decisions. Duastro provides detailed Nakshatra-based analysis to help you align with cosmic harmony for a fulfilling life and personal harmony.`,
+      title: "🌙 Nakshatras & Planetary Cycles",
+      content: `Each Nakshatra (lunar mansion) defines your thoughts, emotions, and destiny. Combined with Mahadasha and Antardasha insights, Duastro reveals when to act, grow, or wait for the right time in life’s cosmic rhythm.`,
     },
     {
-      title: "♾️ Mahadasha: Your Life Chapters",
-      content: `Mahadasha is the long-term planetary period that governs phases of your life through planetary positions. Each Mahadasha is backed by a planet that helps or challenges you in different aspects of life. Duastro provides Mahadasha reports to guide you on favorable and unfavorable times so that you can plan wisely for success and happiness.`,
+      title: "💍 Love, Marriage & Relationships",
+      content: `Discover perfect compatibility with Ashthakoot and Gun Milan analysis. Whether finding your soulmate or strengthening your bond, Duastro’s love astrology offers clarity, trust, and divine timing.`,
     },
     {
-      title: "🪐 Antardasha: Fine Tuning Your Destiny",
-      content: `Antardasha or sub-periods refine your destiny within the larger Mahadasha cycle. These sub-periods are ruled by secondary planets and lead you to fine-tune your energy and focus. Duastro’s advanced astrology predictions bring clarity about which planetary periods demand growth, patience, or action for maximum benefit.`,
-    },
-    {
-      title: "☀️ Planetary Influences in Astrology",
-      content: `Every planet has a story to tell, shaping your emotions, thoughts, and destiny. The Sun symbolizes your soul, Moon your emotions, and Mars your strength. Duastro’s free Kundli software interprets how planets influence everything from your relationships to finances. By understanding planetary strength (Graha Shakti) and placement (Bhava), you can transform your challenges into success.`,
-    },
-    {
-      title: "🏠 The 12 Houses of Your Kundli",
-      content: `Your Kundli is divided into 12 houses, each representing different parts of your life like wealth, family, career, or love. The planets in these houses shape your experiences. For example, the 10th house influences your profession, the 7th your relationships, and the 4th your inner peace. Duastro’s online Kundli prediction gives you in-depth insights into each house for better understanding of your destiny.`,
-    },
-    {
-      title: "📘 Vedic Formulas: The Science Behind Predictions",
-      content: `Duastro’s astrologers use powerful Vedic formulas derived from ancient wisdom. These calculations reveal the movements of planets at the time of your birth, analyze aspects, conjunctions, and transits, and predict how planetary energies influence your life. This scientific method backed by 5000+ years of tradition ensures reliability, accuracy, and practical insights to empower your decision-making.`,
-    },
-    {
-      title: "👩‍💻 Chat with Our Expert Astrologers",
-      content: `Got a question about your career, marriage, or health? Chat live with Duastro astrologers! Serving you online 24/7, our experts analyze your birth chart and provide instant remedies. Each astrologer on Duastro’s platform is verified with deep expertise. From love compatibility to job success, our astrologers bring spiritual clarity and logical answers for your every concern.`,
-    },
-    {
-      title: "✅ 95%+ Accuracy You Can Trust",
-      content: `Our astrology predictions are backed by verified Vedic formulas and expert precision. With data of 60 million+ Kundlis analyzed, Duastro ensures 95%+ accuracy across horoscope predictions, Dasha timelines, and planetary transitions. You can count on Duastro’s predictions for personal and reliable solutions. Whether it is a career issue or relationship doubt, our platform delivers clarity and confidence.`,
-    },
-    {
-      title: "⚡ Fastest Astrology Platform",
-      content: `Get your free Kundli, Horoscope, or Matchmaking report instantly in just seconds! Our cutting-edge technology processes your details and presents accurate results in lightning speed. Duastro’s astrology software saves time while ensuring authentic calculations. Access your free astrology reports from anywhere, anytime, on mobile or desktop with our responsive platform.`,
-    },
-    {
-      title: "💍 Marriage and Love Predictions",
-      content: `Finding the perfect partner or improving an existing relationship is made easy. We analyze your Kundli for relationship suitability, Ashthakoot and Gun Milan compatibility, and Dasha alignment. Duastro provides instant marriage and relationship horoscope reports for specific goals like love success, emotional stability, and long-term harmony.`,
-    },
-    {
-      title: "💼 Career and Financial Guidance",
-      content: `Wondering when you’ll achieve your dream career or financial growth? Duastro’s career horoscope shows the key planetary periods for job success, business expansion, or financial prosperity. Based on your birth details, it highlights favorable timings for investments, promotions, and professional breakthroughs.`,
+      title: "💼 Career & Financial Success",
+      content: `When will opportunity knock? Duastro’s career astrology identifies powerful planetary phases for promotions, new ventures, or financial breakthroughs. Take confident steps toward success with cosmic precision.`,
     },
     {
       title: "🌟 Why Choose Duastro?",
-      content: `Duastro brings the universe to your screen — your cosmic companion, with 95%+ accurate predictions. Duastro has helped over 6 lakh satisfied users find clarity and confidence in life. We combine technology with authentic astrology, offering instant online reports, expert consultations, and AI-powered Kundli analysis. Explore your future with Duastro today and step closer to your destiny.`,
+      content: `Duastro combines 5000+ years of Vedic wisdom with modern technology. With 95%+ accuracy and 6 lakh+ satisfied users worldwide, we help you align with your destiny confidently and instantly.`,
     },
   ];
 
   return (
-    <div className="min-h-screen  bg-gradient-to-b from-[#FFCC33] to-[#FD8115] flex justify-center py-8 px-4 flex-col items-center">
-        <h1 className="text-center text-2xl md:text-3xl font-extrabold text-yellow-400 drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] tracking-wide py-4">
-  Discover Your Cosmic Destiny with Duastro
-</h1>
+    <div className="relative min-h-screen bg-gradient-to-br from-[#FFCC33] via-[#FDBA4D] to-[#FD8115] flex flex-col items-center py-12 px-6 overflow-hidden">
+      
+      {/* ✨ Animated Background Lights */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(255,255,255,0.25),transparent_70%)]"></div>
+      <div className="absolute top-0 left-0 w-40 h-40 bg-[#fff8e1] opacity-30 blur-3xl rounded-full animate-pulse"></div>
+      <div className="absolute bottom-10 right-10 w-56 h-56 bg-[#ffb300] opacity-25 blur-3xl rounded-full animate-pulse"></div>
 
-      <div className="max-w-6xl bg-[#7F6519] text-white rounded-lg shadow-lg p-6 md:p-8 backdrop-blur-sm">
-        
-        <div className="space-y-5">
+      {/* 🌟 Header */}
+      <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-center text-3xl md:text-4xl font-extrabold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)] tracking-wide mb-8"
+      >
+        Discover Your <span className="text-yellow-200">Cosmic Destiny</span> with Duastro
+      </motion.h1>
+
+      {/* 🌌 Main Card */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+        className="relative max-w-6xl bg-[#3D2B00]/80 text-white rounded-3xl shadow-2xl p-8 md:p-12 backdrop-blur-xl border border-yellow-400/20 overflow-hidden"
+      >
+        {/* 🌠 Floating Icons */}
+        <FaStar className="absolute top-4 right-6 text-yellow-400 animate-pulse" />
+        <FaMoon className="absolute bottom-8 left-6 text-yellow-300 opacity-70 animate-bounce" />
+        <FaSun className="absolute top-10 left-10 text-orange-300 opacity-60 animate-spin-slow" />
+
+        {/* 🪐 Topics */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {topics.map((topic, i) => (
-            <div
+            <motion.div
               key={i}
-              className="  rounded-lg"
+              whileHover={{ scale: 1.03, backgroundColor: "rgba(255,255,255,0.1)" }}
+              className="p-5 rounded-xl border border-yellow-500/10 shadow-md transition-all"
             >
-              <h2 className="font-bold text-white md:text-xl">{topic.title}</h2>
-              <p className="text-sm md:text-md leading-relaxed text-gray-200">
+              <h2 className="font-bold text-lg md:text-xl mb-2 text-yellow-300">
+                {topic.title}
+              </h2>
+              <p className="text-sm md:text-base text-gray-100 leading-relaxed">
                 {topic.content}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        <div className="text-left mt-8">
-          <button className="bg-[#fd7e14] hover:bg-[#e76e00] transition px-5 py-2 rounded-md  text-white shadow-lg text-sm">
-            Explore Your Free Astrology Tools Now
-          </button>
+        {/* 🔮 CTA Button */}
+        <div className="text-center mt-10">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-gradient-to-r from-[#FFD54F] to-[#FF9800] hover:shadow-[0_0_20px_rgba(255,152,0,0.7)] text-white font-semibold px-8 py-3 rounded-full transition-all duration-300"
+          >
+            Explore Free Astrology Tools Now 🔮
+          </motion.button>
         </div>
-      </div>
+
+        {/* 🌍 Footer Info */}
+        <p className="text-center text-xs text-gray-300 mt-6">
+          Trusted by 6+ Lakh Users | Verified Astrologers | 95%+ Accuracy
+        </p>
+      </motion.div>
     </div>
   );
 }

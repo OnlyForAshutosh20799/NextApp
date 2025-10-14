@@ -1,39 +1,58 @@
-import Head from 'next/head';
+"use client";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
-export default function CAstrologyServices() {
+export default function FreeAstrologyServices() {
   const services = [
-    { title: 'Career Report', desc: 'Get Your Customized Career Horoscope in PDF - Unlock your Future Success', img: 'https://duastro.com/admin/servicecategoryimg/career_category.webp' },
-    { title: 'Finance Horoscope', desc: 'Get your Personalized Finance Horoscope in Convenient PDF Format', img: 'https://duastro.com/admin/servicecategoryimg/finance_category.webp' },
-    { title: 'Family Horoscope', desc: 'Get Your PDF - Discover Your Destiny in Convenient PDF Format', img: 'https://duastro.com/admin/servicecategoryimg/family__category.webp' },
-    { title: 'Health Horoscope', desc: 'Get Your Personalized Health Horoscope in Convenient PDF Format', img: 'https://duastro.com/admin/servicecategoryimg/health_category.webp' },
-    { title: 'Education Horoscope', desc: 'Get Your Customized Situation Horoscope in PDF - Discover Your Academic Success', img: 'https://duastro.com/admin/servicecategoryimg/education_category.webp' },
-    { title: 'Gemstone Prediction', desc: 'Discover Your Perfect Gemstone with Our FREE Recommendation Guide', img: 'https://duastro.com/admin/servicecategoryimg/gemstone_category.webp' },
-    { title: 'Yearly Horoscope', desc: 'Get Your Full Year Horoscope in PDF Format - Ultimate Guide for 2022', img: 'https://duastro.com/admin/servicecategoryimg/2025_category.webp' },
-    { title: 'Numerology Horoscope', desc: 'Get Your Personalized Numerology Horoscope in PDF - Discover Your Destiny', img: 'https://duastro.com/admin/servicecategoryimg/numerology_category.webp' },
-    { title: 'Kundli Dasha Remedies', desc: 'Get Accurate Kundli Dasha Prediction & Remedies in PDF Format', img: 'https://duastro.com/admin/servicecategoryimg/dosh_category.webp' },
-    { title: 'Lal Kitab Prediction', desc: 'Lal Kitab Prediction Guide in PDF', img: 'https://duastro.com/admin/servicecategoryimg/lalkitab_category.webp' },
-    { title: 'Marriage Matching Report', desc: 'Get Your Marriage Matching Report in Convenient Format', img: 'https://duastro.com/admin/servicecategoryimg/marriage_category.webp' },
-    { title: 'Planet Transit Prediction', desc: 'Get Your Personalized Guide to the Stars in PDF Format', img: 'https://duastro.com/admin/servicecategoryimg/transit_category.webp' },
-    { title: 'In Depth Horoscope', desc: 'Get Your Detailed Horoscope in PDF - Explore Your Future Duastro', img: 'https://duastro.com/admin/servicecategoryimg/complete_category.webp' },
-    { title: '120 Year Dasha Analysis', desc: 'Download Your Free PDF Guide to Complete 120 Year Dasha Analysis', img: 'https://duastro.com/admin/servicecategoryimg/dasha_category.webp' },
-    { title: '300 Yoga Calculation', desc: 'Discover Your Destiny Generate 300 Kundli Yogi in PDF Format', img: 'https://duastro.com/admin/servicecategoryimg/yog_category.webp' },
-    { title: 'Muhurat', desc: 'Discover the Perfect Timing Muhurat Guide for Auspicious Occasions', img: 'https://duastro.com/admin/servicecategoryimg/muhurat.webp' },
+    { title: "Match Making", img: "/assets/services/marrying.jpg" },
+    { title: "Panchang", img: "/assets/services/Panchang1.jpg" },
+    { title: "Tarot Reading", img: "/assets/services/tarot.png" },
+    { title: "Kundli", img: "/assets/services/Kundli.jpg" },
+    { title: "Family Horosope", img: "/assets/services/family.png" },
+    { title: "Numerology", img: "/assets/services/numerology.png" },
+    { title: "Remedies", img: "/assets/services/meds.png" },
+    { title: "Planet Transits", img: "/assets/services/planet.png" },
+    { title: "Vastu", img: "/assets/services/home.jpg" },
+    { title: "Zodiac Signs", img: "/assets/services/zodiac.png" },
+    { title: "Festivals", img: "/assets/services/Festival.jpg" },
+    { title: "Spirituality", img: "/assets/services/spritual.jpg" },
   ];
 
   return (
-    <div className="  bg-gradient-to-r from-[#FFCC33] to-[#FD8115] flex flex-col items-center py-8 lg:py-16">
-      <Head>
-        <title>Astrology Services</title>
-      </Head>
-      <h1 className="text-2xl md:text-3xl font-bold text-white mb-2"><span className='text-black'>Astrology</span> <span className='text-[#FD7E14]'>Services</span></h1>
-      <p className=" mb-6 text-black">Our Horoscope Prediction Services</p>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-5 sm:mx-25">
-        {services.map((service, index) => (
-          <div key={index} className="bg-white rounded-2xl shadow-lg text-center">
-            <img src={service.img} alt={service.title} className="w-full h-18 md:h-32 object-cover mb-2 rounded-t-2xl" />
-            <h2 className="text-sm md:text-lg font-semibold text-gray-800 mt-2 md:mt-5">{service.title}</h2>
-            <p className="md:text-sm text-xs  text-gray-600 mb-2 md:mb-5">{service.desc}</p>
-          </div>
+    <div className="bg-white py-12 px-4 md:px-16">
+      {/* Title */}
+      <motion.h1
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center"
+      >
+         <span className="text-amber-600">Astrology Services</span>
+      </motion.h1>
+
+      {/* Grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-8 place-items-center">
+        {services.map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: index * 0.05 }}
+            className="flex flex-col items-center text-center"
+          >
+            <div className="w-32 h-32 md:w-36 md:h-36 rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300">
+              <Image
+                src={item.img}
+                alt={item.title}
+                width={200}
+                height={200}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3 className="text-md md:text-lg font-semibold text-gray-900 mt-3">
+              {item.title}
+            </h3>
+          </motion.div>
         ))}
       </div>
     </div>

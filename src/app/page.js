@@ -22,10 +22,10 @@ export default function Home() {
     <BAstrologySolution />
     <CAstrologyServices />
     <DZodiacSign />
-    <EDuastroMilestones />
+    {/* <EDuastroMilestones /> */}
     <FOurUnmatchedExpertise />
-    <GNewsBlog />
     <HAstrologicalConnections />
+    <GNewsBlog />    
     <IUnderstandYourFuture />
     <JDiscoverYourCosmic /> 
     <KFaq />  

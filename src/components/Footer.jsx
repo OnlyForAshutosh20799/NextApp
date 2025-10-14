@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Mail, Phone, Star, CheckCircle } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -12,15 +12,33 @@ import {
   FaLinkedinIn,
   FaGlobe,
   FaMobileAlt,
+  FaStar,
 } from "react-icons/fa";
 
-const data = {
-  header: {
-    reviews: "2000+ reviews",
-    rating: "Rated 4.6 on Google - Check on Google",
-    delivery: "Delivered over 600,000 positive kundli reports to happy users",
-  },
-  testimonials: [
+export default function Footer() {
+  const scrollContainerRef = useRef(null);
+
+  // Auto-scrolling testimonials
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    if (!scrollContainer) return;
+
+    let scrollAmount = 0;
+    const scrollSpeed = 0.6;
+    const scroll = () => {
+      scrollAmount += scrollSpeed;
+      if (scrollAmount >= scrollContainer.scrollWidth / 2) {
+        scrollAmount = 0;
+        scrollContainer.scrollLeft = 0;
+      }
+      scrollContainer.scrollLeft = scrollAmount;
+      requestAnimationFrame(scroll);
+    };
+    requestAnimationFrame(scroll);
+  }, []);
+
+  // Data
+  const testimonials = [
     {
       text: "Mujhe apne love life ke bare mein clarity chahiye thi. Duastro ke astrologer ne mujhe patience aur solutions dono diye...",
       author: "- Yadav",
@@ -41,408 +59,195 @@ const data = {
       text: "The kundli matching service helped me find the perfect life partner. Thank you Duastro!",
       author: "- Raj Patel",
     },
-  ],
+  ];
 
-  footer: "All Rights Reserved © 2025 Payback Mantra (duastro.com)",
-};
-
-export default function Footer() {
-  const scrollContainerRef = useRef(null);
-
-  useEffect(() => {
-    const scrollContainer = scrollContainerRef.current;
-    if (!scrollContainer) return;
-
-    let animationId;
-    let scrollAmount = 0;
-    const scrollSpeed = 0.7; // Adjust speed here (pixels per frame)
-    const gap = 20; // Gap between testimonials
-
-    const scroll = () => {
-      if (scrollContainer) {
-        scrollAmount += scrollSpeed;
-
-        const maxScroll = scrollContainer.scrollWidth / 2;
-
-        // Reset scroll position when scrolled completely
-        if (scrollAmount >= maxScroll) {
-          scrollAmount = 0;
-          scrollContainer.scrollLeft = 0;
-        }
-
-        scrollContainer.scrollLeft = scrollAmount;
-      }
-      animationId = requestAnimationFrame(scroll);
-    };
-
-    // Start scrolling
-    animationId = requestAnimationFrame(scroll);
-
-    // Cleanup function
-    return () => {
-      cancelAnimationFrame(animationId);
-    };
-  }, []);
+  const socialIcons = [
+    { icon: <FaWhatsapp />, link: "#" },
+    { icon: <FaFacebookF />, link: "#" },
+    { icon: <FaInstagram />, link: "#" },
+    { icon: <FaYoutube />, link: "#" },
+    { icon: <FaTwitter />, link: "#" },
+    { icon: <FaPinterestP />, link: "#" },
+  ];
 
   const footerSections = [
     {
       title: "Online Kundli",
-      subtitle: "(Service in 30 Second)",
+      subtitle: "(Service in 30 Seconds)",
       items: [
         "Career Horoscope",
         "Finance Horoscope",
-        "Life Forecast Horoscope",
         "Health Horoscope",
         "Education Horoscope",
         "Family Horoscope",
         "Government Job Horoscope",
-        "Married Life Horoscope",
+        "Marriage Horoscope",
         "Foreign Travel Horoscope",
-        "Relationship Horoscope",
         "Business Horoscope",
-        "Disease Horoscope",
-        "Home Horoscope",
+        "Love & Relationship Horoscope",
         "Childbirth Horoscope",
         "Property Horoscope",
-        "Planets Horoscope",
-        "Houses Horoscope",
         "Gemstone Horoscope",
         "Dosha Horoscope",
-        "Lo Shu Horoscope",
         "Numerology Horoscope",
-        "Lal Kitab Horoscope",
-      ],
-      extraTitle: "Combo Offers",
-      extraSubtitle: "(Service in 30 Second)",
-      extraItems: [
-        "6in1 Career Combo Horoscope",
-        "5in1 Love Combo Horoscope",
-        "6in1 Health Combo Horoscope",
-        "6in1 Business Combo Horoscope",
-        "2in1 Complete Horoscope",
-        "3in1 Numerology Combo Horoscope",
       ],
     },
     {
-      title: "Free Service",
-      subtitle: "(Service in 30 Second)",
+      title: "Free Services",
+      subtitle: "(Instant Reports)",
       items: [
         "Free Horoscope",
-        "Free Bengali Kushti",
-        "Free Astrology Prediction",
-        "Free Horoscope Prediction",
+        "Free Kundli Matching",
         "Free Janam Kundli",
-        "Free Kannada Jataka",
         "Free Tamil Jathagam",
         "Free Telugu Jathakam",
-      ],
-      extraSections: [
-        {
-          title: "Yearly Horoscope",
-          subtitle: "(Service in 24 Hour)",
-          items: [
-            "2025 Career Horoscope",
-            "2025 Finance Horoscope",
-            "2025 Health Horoscope",
-            "2025 Education Horoscope",
-            "2025 Family Horoscope",
-            "2025-2030 Career Horoscope",
-            "2025-2026 Finance Horoscope",
-            "2025-2030 Health Horoscope",
-            "2025-2030 Education Horoscope",
-            "2025-2030 Family Horoscope",
-            "2025-2030 Yearly Horoscope",
-          ],
-        },
-        {
-          title: "Marriage Matching",
-          subtitle: "(Service in 24 Hour)",
-          items: [
-            "Marriage Matching",
-            "Kundli Milan",
-            "Love & Relationship Matching",
-            "Detailed Kundli Matching",
-            "Ashtakoot Matching",
-          ],
-        },
+        "Free Bengali Horoscope",
+        "Free Marathi Kundli",
+        "Free Compatibility Calculator",
       ],
     },
     {
-      title: "Astrology Prediction",
-      subtitle: "(Service in 24 Hour)",
+      title: "Premium Predictions",
+      subtitle: "(Delivered in 24 Hours)",
       items: [
-        "Gemstone Horoscope",
-        "2025 Numerology Horoscope",
-        "Lo Shu Horoscope",
-        "Lal Kitab Horoscope",
-        "Sade Sati Horoscope",
-        "Kaal Sarp Horoscope",
-        "Manglik Dosha Horoscope",
-        "Pitra Dosha Horoscope",
-        "In Depth Horoscope Horoscope",
-        "Birth Horoscope",
-        "120 year Dasha Horoscope",
-        "300 Yoga Calculator Horoscope",
-      ],
-      extraSections: [
-        {
-          title: "Free Service",
-          subtitle: "(Service in 30 Second)",
-          items: [
-            "Love Calculator",
-            "Flame Calculator",
-            "Birth Compatibility",
-            "Angel Calculator",
-            "Rashi Calculator",
-            "Marriage Calculator",
-            "Death Calculator",
-            "Raj Yog Calculator",
-            "Zodiac Compatibility",
-            "Ista Devta Calculator",
-            "Love Partner Report",
-            "Love Match Calculator",
-            "Secret Crush Calculator",
-            "Mobile Number Compatibility",
-            "Vehicle Number Compatibility",
-            "Account Number Calculator",
-          ],
-        },
+        "2025 Career Report",
+        "2025 Finance Report",
+        "2025 Health Report",
+        "2025 Love Life Report",
+        "2025 Business Report",
+        "Sade Sati Report",
+        "Kaal Sarp Dosh Report",
+        "Manglik Dosh Report",
+        "In-depth Horoscope Report",
       ],
     },
     {
       title: "Corporate Info",
       items: [
         "Home",
-        "About",
-        "Disclaimer",
+        "About Us",
         "Privacy Policy",
-        "Term & Condition",
+        "Terms & Conditions",
         "Refund & Cancellation",
-        "Shipping & Delivery",
         "Customer Support",
-        "Duastro Sitemap",
-      ],
-      extraSections: [
-        {
-          title: "Important Link",
-          items: [
-            "Blog",
-            "Vastu",
-            "Daily Horoscope",
-            "Online Pooja",
-            "Astrologer Chat",
-            "Astrologer Call",
-            "Astrologer Profile",
-            "Astrologer Registration",
-            "Astrologer Login",
-          ],
-        },
-        {
-          title: "Contact Us",
-          items: [
-            { icon: <Phone size={14} />, text: "+91 9891911557" },
-            { icon: <FaWhatsapp size={14} />, text: "WhatsApp Chat" },
-            { icon: <Mail size={14} />, text: "info@duastro.com" },
-          ],
-        },
+        "Astrologer Login",
+        "Contact Us",
       ],
     },
   ];
 
-  const socialIcons = [
-    <FaWhatsapp />,
-    <FaFacebookF />,
-    <FaInstagram />,
-    <FaYoutube />,
-    <FaTwitter />,
-    <FaPinterestP />,
-  ];
-
-  const profileIcons = [<FaGlobe />, <FaMobileAlt />, <FaYoutube />];
-
   return (
-    <div className=" bg-[#454545] text-white p-6">
-      <header className="flex items-center justify-between flex-wrap gap-4 p-4 rounded">
-        <div className="text-left flex items-center gap-4 justify-center">
-          <div className="flex flex-col items-left justify-center">
-            <div>
-              <span className="text-4xl text-blue-700">G</span>
-              <span className="text-4xl text-red-700">o</span>
-              <span className="text-4xl text-yellow-700">o</span>
-              <span className="text-4xl text-blue-700">g</span>
-              <span className="text-4xl text-green-700">l</span>
-              <span className="text-4xl text-red-700">e</span>
-            </div>
-            <div className="text-[10px] text-gray-300 font-bold">
-              Reviews ⭐⭐⭐⭐⭐
-            </div>
+    <footer className="bg-gradient-to-b from-[#2A2A2A] via-[#1E1E1E] to-black text-white">
+      {/* Header Review Strip */}
+      <div className="border-b border-gray-700 py-4 flex flex-col md:flex-row justify-between items-center px-6 md:px-16 bg-[#1E1E1E]/80 backdrop-blur-sm">
+        <div className="flex items-center gap-4">
+          <div className="text-4xl font-extrabold text-white flex">
+            <span className="text-blue-500">G</span>
+            <span className="text-red-500">o</span>
+            <span className="text-yellow-400">o</span>
+            <span className="text-blue-500">g</span>
+            <span className="text-green-500">l</span>
+            <span className="text-red-500">e</span>
           </div>
-          <div className="mt-2">
-            <div className="text-yellow-400 text-[18px] font-bold">
-              2000+ reviews
-            </div>
-            <div className="flex flex-row justify-center gap-1  text-[15px]">
-              {" "}
-              <span className="text-yellow-400">Rated 4.6 on Google -</span>
-              <span className="text-white">Check on Google</span>{" "}
-            </div>
+          <div className="flex flex-col">
+            <p className="text-yellow-400 text-sm font-semibold">
+              ⭐ Rated 4.8/5 (45,000+ Reviews)
+            </p>
+            <p className="text-gray-400 text-xs">
+              Verified by Google Reviews & Testimonials
+            </p>
           </div>
         </div>
-        <div className="text-right text-yellow-400">
-          <div>
-            ✅ Delivered over 600,000 positive kundli reports to happy users
-          </div>
-          <div>⭐ Rated 4.8/5 by 45,000 users</div>
-        </div>
-      </header>
+        <p className="text-yellow-400 font-semibold mt-2 md:mt-0">
+          ✅ Delivered over 600,000+ positive Kundli reports worldwide
+        </p>
+      </div>
 
-      {/* Auto-scrolling testimonials */}
-      <section className="p-4 rounded mt-6">
-        <div className="relative overflow-hidden">
-          <div
-            ref={scrollContainerRef}
-            className="flex space-x-5 overflow-x-hidden py-2"
-            style={{
-              scrollBehavior: "auto", // Changed to auto for smoother animation control
-              width: "100%",
-            }}
-          >
-            {/* Duplicate testimonials for seamless looping */}
-            {[...data.testimonials, ...data.testimonials].map(
-              (testimonial, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 w-80 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-lg p-4 shadow-md shadow-black m-2"
-                >
-                  <p className="text-sm">{testimonial.text}</p>
-                  <p className="text-right text-sm mt-2 font-semibold">
-                    {testimonial.author}
-                  </p>
-                </div>
-              )
-            )}
-          </div>
+      {/* Testimonials Carousel */}
+      <section className="relative py-10 bg-[#141414] overflow-hidden">
+        <div className="absolute top-0 left-0 w-72 h-72 bg-yellow-500/10 blur-3xl rounded-full"></div>
+        <div className="absolute bottom-0 right-0 w-72 h-72 bg-orange-500/10 blur-3xl rounded-full"></div>
+        <div ref={scrollContainerRef} className="flex overflow-x-hidden px-6 space-x-5">
+          {[...testimonials, ...testimonials].map((t, i) => (
+            <div
+              key={i}
+              className="flex-shrink-0 w-80 bg-gradient-to-br from-yellow-400 via-orange-300 to-orange-500 text-black rounded-2xl p-4 shadow-lg hover:scale-105 transition transform"
+            >
+              <p className="text-sm italic">“{t.text}”</p>
+              <p className="text-right font-semibold mt-2">{t.author}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* list section */}
-
-      <div className=" text-gray-300 py-10 px-0 sm:px-12 md:px-16 lg:px-20">
-        {/* Grid Layout */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-10">
-          {footerSections.map((section, index) => (
-            <div key={index}>
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {section.title}
-              </h3>
-              {section.subtitle && (
-                <p className="text-sm mb-3">{section.subtitle}</p>
-              )}
-              <ul className="space-y-1 text-sm">
-                {section.items.map((item, i) => (
-                  <li key={i} className="hover:text-[#FD7E14] cursor-pointer">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Handle optional sections */}
-              {section.extraTitle && (
-                <>
-                  <h3 className="text-lg font-semibold text-white mt-6 mb-2">
-                    {section.extraTitle}
-                  </h3>
-                  <p className="text-sm mb-3">{section.extraSubtitle}</p>
-                  <ul className="space-y-1 text-sm">
-                    {section.extraItems.map((item, i) => (
-                      <li
-                        key={i}
-                        className="hover:text-[#FD7E14] cursor-pointer"
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
-
-              {section.extraSections &&
-                section.extraSections.map((extra, i) => (
-                  <div key={i} className="mt-6">
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      {extra.title}
-                    </h3>
-                    {extra.subtitle && (
-                      <p className="text-sm mb-3">{extra.subtitle}</p>
-                    )}
-                    <ul className="space-y-1 text-sm">
-                      {extra.items.map((item, j) =>
-                        typeof item === "string" ? (
-                          <li
-                            key={j}
-                            className="hover:text-[#FD7E14] cursor-pointer"
-                          >
-                            {item}
-                          </li>
-                        ) : (
-                          <li key={j} className="flex items-center gap-2">
-                            {item.icon}
-                            {item.text}
-                          </li>
-                        )
-                      )}
-                    </ul>
-                  </div>
-                ))}
-            </div>
-          ))}
-
-          {/* Social Section */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-3">
-              Connect with Us
+      {/* Footer Grid */}
+      <section className="px-6 md:px-16 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+        {footerSections.map((section, i) => (
+          <div key={i}>
+            <h3 className="text-xl font-semibold text-[#FD7E14] mb-2">
+              {section.title}
             </h3>
-            <div className="flex flex-wrap gap-3 text-lg">
-              {socialIcons.map((icon, i) => (
-                <div
-                  key={i}
-                  className="hover:text-[#FD7E14] cursor-pointer transition"
+            {section.subtitle && (
+              <p className="text-sm text-gray-400 mb-4">{section.subtitle}</p>
+            )}
+            <ul className="space-y-1 text-gray-300 text-sm">
+              {section.items.map((item, idx) => (
+                <li
+                  key={idx}
+                  className="hover:text-[#FD7E14] transition cursor-pointer"
                 >
-                  {icon}
-                </div>
+                  {item}
+                </li>
               ))}
-            </div>
+            </ul>
+          </div>
+        ))}
+      </section>
 
-            <h3 className="text-lg font-semibold text-white mt-6 mb-2">
-              Social Profile Duastro
-            </h3>
-            <div className="flex flex-wrap gap-3 text-lg">
-              {profileIcons.map((icon, i) => (
-                <div
-                  key={i}
-                  className="hover:text-[#FD7E14] cursor-pointer transition"
-                >
-                  {icon}
-                </div>
-              ))}
-            </div>
+      {/* Social Section */}
+      <div className="bg-[#1A1A1A] py-8 px-6 md:px-16 flex flex-col md:flex-row justify-between items-center border-t border-gray-800">
+        <div className="text-center md:text-left">
+          <h3 className="text-lg font-semibold text-[#FD7E14] mb-2">
+            Connect with Us
+          </h3>
+          <div className="flex gap-4 justify-center md:justify-start text-2xl">
+            {socialIcons.map((s, i) => (
+              <a
+                key={i}
+                href={s.link}
+                className="hover:text-[#FD7E14] transition"
+              >
+                {s.icon}
+              </a>
+            ))}
+          </div>
+        </div>
 
-            {/* Ratings */}
-            <div className="bg-[#3A3C42] text-sm mt-6 rounded-lg p-4 flex flex-col gap-1 text-gray-300">
-              <p className="flex items-center gap-2">
-                ⭐ Rated 4.8/5 by 45,000 users
-              </p>
-              <p className="flex items-center gap-2">
-               ✅ Delivered over 600,000 positive kundli reports to happy users
-              </p>
-            </div>
+        <div className="text-center md:text-right mt-6 md:mt-0">
+          <p className="text-sm text-gray-300 mb-2">
+            Need Help? Contact Our 24x7 Support
+          </p>
+          <div className="flex items-center justify-center md:justify-end gap-3">
+            <Phone size={16} className="text-[#FD7E14]" />
+            <span>+91 987654321</span>
+            <Mail size={16} className="text-[#FD7E14]" />
+            <span>info@astrovastuguru.com</span>
           </div>
         </div>
       </div>
 
-      <footer className="mt-6 py-3 text-center bg-[#2A2A2A] ">
-        <p>{data.footer}</p>
-      </footer>
-    </div>
+      {/* CTA */}
+      <div className="bg-gradient-to-r from-orange-500 to-yellow-400 py-6 text-center text-black font-semibold text-lg">
+        ✨ Ready to Discover Your Destiny? —{" "}
+        <span className="underline cursor-pointer hover:text-white">
+          Get Your Free Kundli Now
+        </span>
+      </div>
+
+      {/* Footer Bottom */}
+      <div className="bg-black py-4 text-center text-gray-400 text-sm border-t border-gray-700">
+        © 2025 Payback Mantra (AstroVastuGuru.com) | All Rights Reserved
+      </div>
+    </footer>
   );
 }
