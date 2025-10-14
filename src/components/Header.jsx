@@ -57,7 +57,7 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-lg fixed top-0 left-0 z-50">
+    <header className="w-full bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-lg fixed top-0 left-0 z-50 px-5">
       <div className="max-w-7xl mx-auto ">
         <div className="flex items-center justify-between h-16">
           {/* LOGO */}
