@@ -11,23 +11,23 @@ export default function KFaq() {
       id: 1,
       question: "❓ What is a Kundli and why should I get one?",
       answer:
-        "A Kundli (birth chart) is your cosmic DNA created using your birth time, date, and place. It reveals your life's purpose, strengths, weaknesses, and destiny path. At Duastro, our reports are powered by 20,000+ Vedic formulas and a 10,000,000-word database, ensuring over 95% accuracy. Getting your Kundli helps you align your actions with the universe and make confident life decisions.",
+        "A Kundli (birth chart) is your cosmic DNA created using your birth time, date, and place. It reveals your life's purpose, strengths, weaknesses, and destiny path. At AstroVastuGuru, our reports are powered by 20,000+ Vedic formulas and a 10,000,000-word database, ensuring over 95% accuracy. Getting your Kundli helps you align your actions with the universe and make confident life decisions.",
     },
     {
       id: 2,
-      question: "🌟 How accurate are Duastro free and premium horoscopes?",
+      question: "🌟 How accurate are AstroVastuGuru free and premium horoscopes?",
       answer:
-        "Both free and premium Duastro horoscopes deliver 95%+ accuracy. Our algorithm combines ancient Vedic wisdom and advanced AI to generate real-time planetary analysis. Premium reports include deeper insights into love, health, wealth, and career based on your Mahadasha and planetary transits — crafted by verified astrologers for true cosmic clarity.",
+        "Both free and premium AstroVastuGuru horoscopes deliver 95%+ accuracy. Our algorithm combines ancient Vedic wisdom and advanced AI to generate real-time planetary analysis. Premium reports include deeper insights into love, health, wealth, and career based on your Mahadasha and planetary transits — crafted by verified astrologers for true cosmic clarity.",
     },
     {
       id: 3,
       question: "💬 How does the chat with astrologer feature work?",
       answer:
-        "Duastro offers 24/7 expert astrologer chat where you can ask personal questions about your career, love, marriage, or finances. You are billed per minute, and unused minutes remain saved. Each response is backed by your unique Kundli, ensuring deeply personalized, reliable, and spiritually aligned answers.",
+        "AstroVastuGuru offers 24/7 expert astrologer chat where you can ask personal questions about your career, love, marriage, or finances. You are billed per minute, and unused minutes remain saved. Each response is backed by your unique Kundli, ensuring deeply personalized, reliable, and spiritually aligned answers.",
     },
     {
       id: 4,
-      question: "🔮 What makes Duastro predictions so accurate?",
+      question: "🔮 What makes AstroVastuGuru predictions so accurate?",
       answer:
         "Our predictions are powered by 20,000+ Vedic formulas, AI-assisted planetary mapping, and a decade of expert validation. Each prediction is custom-built for your chart — covering planetary strength, Dasha transitions, and karmic energy balance — giving you clarity on every stage of your life journey.",
     },
@@ -50,7 +50,7 @@ export default function KFaq() {
       </h1>
       <p className="max-w-2xl text-center text-gray-700 mb-10 text-base md:text-lg">
         Here are the answers to the most common questions people ask about
-        <span className="font-semibold text-[#FD7E14]"> Duastro </span> and our
+        <span className="font-semibold text-[#FD7E14]"> AstroVastuGuru </span> and our
         astrology tools. Explore your doubts and find clarity in the stars ✨
       </p>
 

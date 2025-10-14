@@ -7,7 +7,7 @@ export default function BAstrologySolution() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-b from-[#FFF5E6] via-[#FFE7C2] to-[#FFD89A] flex flex-col items-center justify-center text-center px-6 py-16 md:py-24">
       <Head>
-        <title>Astrology Solution | Duastro</title>
+        <title>Astrology Solution | AstroVastuGuru</title>
       </Head>
 
       {/* Background glow */}
@@ -18,7 +18,7 @@ export default function BAstrologySolution() {
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className=" text-2xl md:text-4xl lg:text-5xl font-extrabold text-[#3B1F00] mb-3 text-center"
+        className=" text-2xl md:text-4xl font-extrabold text-[#3B1F00] mb-3 text-center"
       >
         Perfect Astrology <span className="text-[#FD7E14]">  Solution for You ✨</span>
       </motion.h1>

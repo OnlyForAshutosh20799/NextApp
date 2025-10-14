@@ -76,7 +76,7 @@ export default function IUnderstandYourFuture() {
 
         {/* 📈 Small tagline */}
         <p className="text-xs text-gray-500 mt-4">
-          Trusted by 1 Lakh+ People | 95% Accuracy | Powered by Duastro Experts
+          Trusted by 1 Lakh+ People | 95% Accuracy | Powered by AstroVastuGuru Experts
         </p>
       </motion.div>
     </section>

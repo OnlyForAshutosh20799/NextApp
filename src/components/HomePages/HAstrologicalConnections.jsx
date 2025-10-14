@@ -50,7 +50,7 @@ export default function HAstrologicalConnections() {
           </span>
         </motion.h1>
         <p className="text-white/90 italic mb-8 text-lg">
-          💫 Find Your Perfect Match with Duastro’s Expert Marriage Predictions 💫
+          💫 Find Your Perfect Match with AstroVastuGuru Expert Marriage Predictions 💫
         </p>
       </div>
 
@@ -66,7 +66,7 @@ export default function HAstrologicalConnections() {
           <p className="text-base md:text-lg leading-relaxed">
             Astrology holds the secret to everlasting relationships. It reveals
             the cosmic blueprint of your connection by decoding planetary
-            alignments, star positions, and emotional resonance. Duastro’s
+            alignments, star positions, and emotional resonance.AstroVastuGuru’s
             astrologers harmonize your energies to ensure your bond thrives on
             emotional, spiritual, and karmic levels.
           </p>
@@ -126,7 +126,7 @@ export default function HAstrologicalConnections() {
         </h3>
         <p className="text-white/80 max-w-2xl mx-auto">
           Experience the power of astrology in uniting two souls destined by the
-          universe. Let Duastro illuminate your journey to true love — where
+          universe. Let AstroVastuGuru illuminate your journey to true love — where
           destiny meets devotion.
         </p>
       </div>

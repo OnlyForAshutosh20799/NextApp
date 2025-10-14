@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function EDuastroMilestones() {
+export default function EAstroVastuGuruMilestones() {
   const milestones = [
     { value: '600K', label: 'Kundlis Delivered' },
     { value: '45K', label: 'Positive Reviews' },
@@ -13,9 +13,9 @@ export default function EDuastroMilestones() {
   return (
     <div className="bg-gradient-to-r from-[#FFCC33] to-[#FD8115] flex flex-col items-center justify-center p-6">
       <Head>
-        <title>Duastro Milestones</title>
+        <title>AstroVastuGuru Milestones</title>
       </Head>
-      <h1 className="md:text-3xl text-2xl  font-bold mb-4 text-white text-center">Duastro <span className='text-black'>Milestones</span></h1>
+      <h1 className="md:text-3xl text-2xl  font-bold mb-4 text-white text-center">AstroVastuGuru <span className='text-black'>Milestones</span></h1>
       <p className="text-white mb-8 text-center max-w-2xl italic">
         Providing Power to millions with rapid and accurate astrological guidance
       </p>

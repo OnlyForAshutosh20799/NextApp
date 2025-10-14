@@ -93,7 +93,7 @@ export default function DZodiacSign() {
   return (
     <div className="relative bg-gradient-to-br from-[#FFF8E7] via-[#FFEAC7] to-[#FFD8A9] py-14 px-4 overflow-hidden">
       <Head>
-        <title>Zodiac Signs | Duastro</title>
+        <title>Zodiac Signs | AstroVastuGuru</title>
       </Head>
 
       {/* Background decorative orbs */}

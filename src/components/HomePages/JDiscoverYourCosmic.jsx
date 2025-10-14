@@ -7,31 +7,31 @@ export default function JDiscoverYourCosmic() {
   const topics = [
     {
       title: "🌞 What is Astrology?",
-      content: `Astrology bridges the cosmic and human worlds, revealing how planets and stars influence your destiny. Duastro’s expert analysis helps you uncover your life path, purpose, and hidden strengths — from love and health to wealth and destiny.`,
+      content: `Astrology bridges the cosmic and human worlds, revealing how planets and stars influence your destiny. AstroVastuGuru’s expert analysis helps you uncover your life path, purpose, and hidden strengths — from love and health to wealth and destiny.`,
     },
     {
       title: "📘 Understanding Your Kundli",
-      content: `Your Kundli is your celestial DNA — a blueprint of your soul at birth. Discover how each planetary position shapes your personality, emotions, and life events. Duastro’s instant online Kundli report provides deep clarity within seconds.`,
+      content: `Your Kundli is your celestial DNA — a blueprint of your soul at birth. Discover how each planetary position shapes your personality, emotions, and life events. AstroVastuGuru’s instant online Kundli report provides deep clarity within seconds.`,
     },
     {
       title: "💫 Power of Horoscopes",
-      content: `Daily, weekly, and yearly horoscopes crafted from Vedic astrology reveal the movements of the planets guiding your choices. Duastro’s predictions empower you to attract success and positivity every day.`,
+      content: `Daily, weekly, and yearly horoscopes crafted from Vedic astrology reveal the movements of the planets guiding your choices. AstroVastuGuru’s predictions empower you to attract success and positivity every day.`,
     },
     {
       title: "🌙 Nakshatras & Planetary Cycles",
-      content: `Each Nakshatra (lunar mansion) defines your thoughts, emotions, and destiny. Combined with Mahadasha and Antardasha insights, Duastro reveals when to act, grow, or wait for the right time in life’s cosmic rhythm.`,
+      content: `Each Nakshatra (lunar mansion) defines your thoughts, emotions, and destiny. Combined with Mahadasha and Antardasha insights, AstroVastuGuru reveals when to act, grow, or wait for the right time in life’s cosmic rhythm.`,
     },
     {
       title: "💍 Love, Marriage & Relationships",
-      content: `Discover perfect compatibility with Ashthakoot and Gun Milan analysis. Whether finding your soulmate or strengthening your bond, Duastro’s love astrology offers clarity, trust, and divine timing.`,
+      content: `Discover perfect compatibility with Ashthakoot and Gun Milan analysis. Whether finding your soulmate or strengthening your bond, AstroVastuGuru’s love astrology offers clarity, trust, and divine timing.`,
     },
     {
       title: "💼 Career & Financial Success",
-      content: `When will opportunity knock? Duastro’s career astrology identifies powerful planetary phases for promotions, new ventures, or financial breakthroughs. Take confident steps toward success with cosmic precision.`,
+      content: `When will opportunity knock? AstroVastuGuru’s career astrology identifies powerful planetary phases for promotions, new ventures, or financial breakthroughs. Take confident steps toward success with cosmic precision.`,
     },
     {
-      title: "🌟 Why Choose Duastro?",
-      content: `Duastro combines 5000+ years of Vedic wisdom with modern technology. With 95%+ accuracy and 6 lakh+ satisfied users worldwide, we help you align with your destiny confidently and instantly.`,
+      title: "🌟 Why Choose AstroVastuGuru?",
+      content: `AstroVastuGuru combines 5000+ years of Vedic wisdom with modern technology. With 95%+ accuracy and 6 lakh+ satisfied users worldwide, we help you align with your destiny confidently and instantly.`,
     },
   ];
 
@@ -50,7 +50,7 @@ export default function JDiscoverYourCosmic() {
         transition={{ duration: 1 }}
         className="text-center text-3xl md:text-4xl font-extrabold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)] tracking-wide mb-8"
       >
-        Discover Your <span className="text-yellow-200">Cosmic Destiny</span> with Duastro
+        Discover Your <span className="text-yellow-200">Cosmic Destiny</span> with AstroVastuGuru
       </motion.h1>
 
       {/* 🌌 Main Card */}

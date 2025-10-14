@@ -20,9 +20,9 @@ export default function FOurUnmatchedExpertise() {
   ];
 
   return (
-    <div className="relative min-h-screen bg-[#fff] py-16 px-6 overflow-hidden">
+    <div className="relative  bg-[#fff] py-16 px-6 overflow-hidden">
       <Head>
-        <title>Our Unmatched Expertise Team | Duastro</title>
+        <title>Our Unmatched Expertise Team | AstroVastuGuru</title>
       </Head>
 
       {/* Decorative background orbs */}
@@ -79,7 +79,7 @@ export default function FOurUnmatchedExpertise() {
           🌟 Empowering Lives Through Ancient Knowledge & Modern Insight 🌟
         </h3>
         <p className="max-w-2xl mx-auto text-gray-600">
-          From guiding your career to harmonizing your home, our experts at Duastro bring celestial clarity to every
+          From guiding your career to harmonizing your home, our experts at AstroVastuGuru bring celestial clarity to every
           aspect of your life — helping you achieve peace, purpose, and prosperity.
         </p>
       </motion.div>

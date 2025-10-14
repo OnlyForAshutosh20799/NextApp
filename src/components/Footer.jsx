@@ -40,23 +40,23 @@ export default function Footer() {
   // Data
   const testimonials = [
     {
-      text: "Mujhe apne love life ke bare mein clarity chahiye thi. Duastro ke astrologer ne mujhe patience aur solutions dono diye...",
+      text: "Mujhe apne love life ke bare mein clarity chahiye thi. AstroVastuGuru ke astrologer ne mujhe patience aur solutions dono diye...",
       author: "- Yadav",
     },
     {
-      text: "Chatting experience with Duastro astrologer was smooth. Unhone sab kuch calmly explain kiya. Kundli report well-organized...",
+      text: "Chatting experience with AstroVastuGuru astrologer was smooth. Unhone sab kuch calmly explain kiya. Kundli report well-organized...",
       author: "- Muhammad Yaseen",
     },
     {
-      text: "Duastro ke astrologers highly experienced lage. Jo bhi bol, usme sachchayi. Astrology report clean, easy to read thi...",
+      text: "AstroVastuGuru ke astrologers highly experienced lage. Jo bhi bol, usme sachchayi. Astrology report clean, easy to read thi...",
       author: "- Vakani Kumar",
     },
     {
-      text: "Excellent service and accurate predictions. My life has changed after consulting with Duastro astrologers.",
+      text: "Excellent service and accurate predictions. My life has changed after consulting with AstroVastuGuru astrologers.",
       author: "- Priya Sharma",
     },
     {
-      text: "The kundli matching service helped me find the perfect life partner. Thank you Duastro!",
+      text: "The kundli matching service helped me find the perfect life partner. Thank you AstroVastuGuru!",
       author: "- Raj Patel",
     },
   ];
