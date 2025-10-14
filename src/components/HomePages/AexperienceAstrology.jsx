@@ -60,7 +60,7 @@ export default function AexperienceAstrology() {
       <motion.div
        initial={{ opacity: 0, scale: 0.9, y: 30 }}
   whileInView={{ opacity: 1, scale: 1, y: 0 }}
-  transition={{ duration: 1.5, ease: "easeOut" }} // duration in seconds
+  transition={{ duration: 0.7, ease: "easeOut" }} // duration in seconds
 
       className=" w-full md:w-1/2 flex justify-center md:justify-end relative">
         <img
