@@ -34,27 +34,7 @@ const navItems = [
       { label: "Astrologer Login", href: "/pages/astrology/astrologyProfile/astrologerLogin" },
     ],
   },
-  {
-    label: "Book Pooja",
-    subItems: [
-      { label: "Navgraha", href: "/book-pooja/navgraha" },
-      { label: "Love & Relationship Pooja", href: "/book-pooja/love" },
-      { label: "Pooja for Vashikaran", href: "/book-pooja/vashikaran" },
-      { label: "Pooja for Career", href: "/book-pooja/poojaForCareer" },
-      { label: "Pooja for Finance", href: "/book-pooja/poojaForFinance" },
-      { label: "Pooja for Education", href: "/book-pooja/poojaForEducation" },
-      { label: "Pooja for Travel", href: "/book-pooja/poojaForTravel" },
-      { label: "Pooja for Child Birth", href: "/book-pooja/poojaForChileBirth" },
-      { label: "Pooja for Planetary", href: "/book-pooja/poojaForPlanetary" },
-      { label: "Pooja for Marriage", href: "/book-pooja/poojaForMarriage" },
-      { label: "Pooja for Health", href: "/book-pooja/poojaForHealth" },
-      { label: "Nakshtra Pooja", href: "/book-pooja/nakshtraPooja" },
-      { label: "Dosh", href: "/book-pooja/dosh" },
-      { label: "Pooja for Overcome Enemies", href: "/book-pooja/poojaForOvercomeEnemies" },
-      { label: "Path and Jaap", href: "/book-pooja/pathAndJaap" },
-      { label: "Evil Eye", href: "/book-pooja/evilEys" },
-    ],
-  },
+  { label: "Book Pooja", href: "/pages/bookPooja/poojaCategories" },
   { label: "Blog", href: "/blog" },
 ];
 
@@ -66,13 +46,14 @@ export default function Header() {
     setOpenMenu(openMenu === label ? null : label);
   };
 
-  const handleSubmenu =()=>{
-    setMobileOpen(false)
-  }
+  const handleLinkClick = () => {
+    setMobileOpen(false);
+    setOpenMenu(null);
+  };
 
   return (
     <header className="w-full bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-lg fixed top-0 left-0 z-50 px-5">
-      <div className="max-w-7xl mx-auto ">
+      <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between h-16">
           {/* LOGO */}
           <div className="text-xl md:text-2xl lg:text-3xl font-extrabold bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent">
@@ -144,36 +125,42 @@ export default function Header() {
           <div className="px-4 py-3 space-y-2">
             {navItems.map((item) => (
               <div key={item.label}>
-                <div
-                  className="flex justify-between items-center px-3 py-2 text-gray-800 font-semibold hover:bg-gray-100 cursor-pointer"
-                  onClick={() =>
-                    item.subItems ? toggleSubMenu(item.label) : null
-                  }
-                >
-                  <span>{item.label}</span>
-                  {item.subItems && (
-                    <ChevronDownIcon
-                      className={`w-5 h-5 text-gray-500 transform transition-transform ${
-                        openMenu === item.label ? "rotate-180" : ""
-                      }`}
-                    />
-                  )}
-                </div>
-
-                {/* SUBMENU */}
-                {item.subItems && openMenu === item.label && (
-                  <div className="pl-5 py-1 space-y-1 bg-gray-50 rounded-md">
-                    {item.subItems.map((sub) => (
-                      <Link
-                      onClick={handleSubmenu}
-                        key={sub.label}
-                        href={sub.href}
-                        className="block px-3 py-2 text-gray-700 hover:text-[#FD7E14] hover:bg-gray-100 rounded-md transition-all font-medium"
-                      >
-                        {sub.label}
-                      </Link>
-                    ))}
-                  </div>
+                {item.subItems ? (
+                  <>
+                    <div
+                      className="flex justify-between items-center px-3 py-2 text-gray-800 font-semibold hover:bg-gray-100 cursor-pointer"
+                      onClick={() => toggleSubMenu(item.label)}
+                    >
+                      <span>{item.label}</span>
+                      <ChevronDownIcon
+                        className={`w-5 h-5 text-gray-500 transform transition-transform ${
+                          openMenu === item.label ? "rotate-180" : ""
+                        }`}
+                      />
+                    </div>
+                    {openMenu === item.label && (
+                      <div className="pl-5 py-1 space-y-1 bg-gray-50 rounded-md">
+                        {item.subItems.map((sub) => (
+                          <Link
+                            key={sub.label}
+                            href={sub.href}
+                            onClick={handleLinkClick}
+                            className="block px-3 py-2 text-gray-700 hover:text-[#FD7E14] hover:bg-gray-100 rounded-md transition-all font-medium"
+                          >
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    href={item.href}
+                    onClick={handleLinkClick}
+                    className="block px-3 py-2 text-gray-800 font-semibold hover:text-[#FD7E14] hover:bg-gray-100 rounded-md transition-all"
+                  >
+                    {item.label}
+                  </Link>
                 )}
               </div>
             ))}
