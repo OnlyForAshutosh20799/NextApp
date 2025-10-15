@@ -28,8 +28,8 @@ const navItems = [
     label: "Astrologer",
     subItems: [
       { label: "Astrologer Profile", href: "/pages/astrology/astrologyProfile/profileList" },
-      { label: "Chat With Astrologer", href: "/pages/astrology/astrologyProfile/profileList?type=Chat" },
-      { label: "Call With Astrologer", href: "/pages/astrology/astrologyProfile/profileList?type=Call" },
+      { label: "Chat With Astrologer", href: "/pages/astrology/astrologyProfile/profileList?type=Chat with" },
+      { label: "Call With Astrologer", href: "/pages/astrology/astrologyProfile/profileList?type=Call with" },
       { label: "Register as Astrologer", href: "/pages/astrology/astrologyProfile/PartnershipRegistration" },
       { label: "Astrologer Login", href: "/pages/astrology/astrologyProfile/astrologerLogin" },
     ],
