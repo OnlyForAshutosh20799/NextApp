@@ -1,23 +1,21 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import AexperienceAstrology from "@/components/HomePages/AexperienceAstrology";
-import BAstrologySolution from "@/components/HomePages/BAstrologySolution";
-import CAstrologyServices from "@/components/HomePages/CAstrologyServices";
-import DZodiacSign from "@/components/HomePages/DZodiacSign";
-import EDuastroMilestones from "@/components/HomePages/EDuastroMilestones"
-import FOurUnmatchedExpertise from "@/components/HomePages/FOurUnmatchedExpertise";
-import GNewsBlog from "@/components/HomePages/GNewsBlog";
-import HAstrologicalConnections from "@/components/HomePages/HAstrologicalConnections";
-import IUnderstandYourFuture from "@/components/HomePages/IUnderstandYourFuture";
-import JDiscoverYourCosmic from "@/components/HomePages/JDiscoverYourCosmic";
-import KFaq from "@/components/HomePages/KFaq";
+import AexperienceAstrology from "@/app/pages/HomePages/AexperienceAstrology";
+import BAstrologySolution from "@/app/pages/HomePages/BAstrologySolution";
+import CAstrologyServices from "@/app/pages/HomePages/CAstrologyServices";
+import DZodiacSign from "@/app/pages/HomePages/DZodiacSign";
+import EDuastroMilestones from "@/app/pages/HomePages/EDuastroMilestones"
+import FOurUnmatchedExpertise from "@/app/pages/HomePages/FOurUnmatchedExpertise";
+import GNewsBlog from "@/app/pages/HomePages/GNewsBlog";
+import HAstrologicalConnections from "@/app/pages/HomePages/HAstrologicalConnections";
+import IUnderstandYourFuture from "@/app/pages/HomePages/IUnderstandYourFuture";
+import JDiscoverYourCosmic from "@/app/pages/HomePages/JDiscoverYourCosmic";
+import KFaq from "@/app/pages/HomePages/KFaq";
 
 import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-    <Header />
+ 
     <AexperienceAstrology />
     <BAstrologySolution />
     <CAstrologyServices />
@@ -29,7 +27,7 @@ export default function Home() {
     <IUnderstandYourFuture />
     <JDiscoverYourCosmic /> 
     <KFaq />  
-    <Footer />
+  
     </>
   );
 }
