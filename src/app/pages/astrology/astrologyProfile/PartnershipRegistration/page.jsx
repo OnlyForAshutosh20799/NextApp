@@ -8,11 +8,11 @@ export default function PartnershipRegistration() {
   const prevStep = () => setStep(step - 1);
 
   return (
-    <div className="mt-17 min-h-screen bg-gradient-to-b from-saffron-100 via-yellow-100 to-white flex items-center justify-center p-4">
+    <div className="mt-17 bg-gradient-to-b from-saffron-100 via-yellow-100 to-white flex items-center justify-center p-4">
       <div className="bg-white shadow-2xl rounded-2xl w-full max-w-lg p-6 md:p-12 mx-2 md:mx-0 flex flex-col h-full">
         {/* Header */}
         <div className="text-center mb-6">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-golden-700 mb-2">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-golden-700 mb-2 text-black">
             AstroVastuGuru <span className="text-yellow-500">✨</span>
           </h1>
           <h2 className="text-xl md:text-2xl font-semibold text-gray-900">

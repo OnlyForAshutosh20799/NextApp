@@ -2,10 +2,10 @@ import React from "react";
 
 export default function LoginPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-saffron-100 via-yellow-100 to-white flex flex-col md:flex-row items-center justify-center p-4 md:p-12">
+    <div className="mt-15 bg-gradient-to-b from-saffron-100 via-yellow-100 to-white flex flex-col md:flex-row items-center justify-center p-4 md:p-12">
       {/* Login Card */}
       <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 w-full max-w-xl flex flex-col">
-        <h1 className="text-center text-3xl md:text-4xl font-extrabold text-golden-600 mb-6">
+        <h1 className="text-center text-3xl md:text-4xl font-extrabold text-golden-600 mb-6 text-black">
           AstroVastuGuru <span className="text-yellow-500">✨</span>
         </h1>
 

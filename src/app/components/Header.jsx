@@ -66,6 +66,10 @@ export default function Header() {
     setOpenMenu(openMenu === label ? null : label);
   };
 
+  const handleSubmenu =()=>{
+    setMobileOpen(false)
+  }
+
   return (
     <header className="w-full bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-lg fixed top-0 left-0 z-50 px-5">
       <div className="max-w-7xl mx-auto ">
@@ -161,6 +165,7 @@ export default function Header() {
                   <div className="pl-5 py-1 space-y-1 bg-gray-50 rounded-md">
                     {item.subItems.map((sub) => (
                       <Link
+                      onClick={handleSubmenu}
                         key={sub.label}
                         href={sub.href}
                         className="block px-3 py-2 text-gray-700 hover:text-[#FD7E14] hover:bg-gray-100 rounded-md transition-all font-medium"
