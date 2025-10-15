@@ -8,7 +8,7 @@ export default function PartnershipRegistration() {
   const prevStep = () => setStep(step - 1);
 
   return (
-    <div className="mt-17 bg-gradient-to-b from-saffron-100 via-yellow-100 to-white flex items-center justify-center p-4">
+    <div className="mt-30 my-20 bg-gradient-to-b from-saffron-100 via-yellow-100 to-white flex items-center justify-center p-4">
       <div className="bg-white shadow-2xl rounded-2xl w-full max-w-lg p-6 md:p-12 mx-2 md:mx-0 flex flex-col h-full">
         {/* Header */}
         <div className="text-center mb-6">
