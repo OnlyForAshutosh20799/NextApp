@@ -8,7 +8,6 @@ const navItems = [
   { label: "Home", href: "/" },
   {
     label: "Kundli",
-    href: "/kundli",
     subItems: [
       { label: "Free Kundli", href: "/kundli/free" },
       { label: "Premium Kundli Report", href: "/kundli/premium" },
@@ -18,7 +17,6 @@ const navItems = [
   },
   {
     label: "Horoscope",
-    href: "/horoscope",
     subItems: [
       { label: "Today Horoscope", href: "/horoscope/today" },
       { label: "Weekly Horoscope", href: "/horoscope/weekly" },
@@ -28,18 +26,16 @@ const navItems = [
   },
   {
     label: "Astrologer",
-    href: "/astrologer",
     subItems: [
       { label: "Astrologer Profile", href: "/pages/astrology/astrologyProfile/profileList" },
-      { label: "Chat With Astrologer", href: "/pages/astrology/astrologyProfile/profileList?type=Chat with" },
-      { label: "Call With Astrologer", href: "/pages/astrology/astrologyProfile/profileList?type=Call with" },
+      { label: "Chat With Astrologer", href: "/pages/astrology/astrologyProfile/profileList?type=Chat" },
+      { label: "Call With Astrologer", href: "/pages/astrology/astrologyProfile/profileList?type=Call" },
       { label: "Register as Astrologer", href: "/pages/astrology/astrologyProfile/PartnershipRegistration" },
       { label: "Astrologer Login", href: "/pages/astrology/astrologyProfile/astrologerLogin" },
     ],
   },
   {
     label: "Book Pooja",
-    href: "/book-pooja",
     subItems: [
       { label: "Navgraha", href: "/book-pooja/navgraha" },
       { label: "Love & Relationship Pooja", href: "/book-pooja/love" },
@@ -73,24 +69,28 @@ export default function Header() {
   return (
     <header className="w-full bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-lg fixed top-0 left-0 z-50 px-5">
       <div className="max-w-7xl mx-auto ">
-        <div className="flex items-center justify-between h-18">
+        <div className="flex items-center justify-between h-16">
           {/* LOGO */}
-          <div className="flex items-center gap-2">
-            <div className="text-xl md:text-2xl lg:text-3xl font-extrabold bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent">
-             AstroVastuGuru
-            </div>
+          <div className="text-xl md:text-2xl lg:text-3xl font-extrabold bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent">
+            AstroVastuGuru
           </div>
 
           {/* DESKTOP NAVIGATION */}
-          <nav className="hidden md:flex  items-center">
+          <nav className="hidden md:flex items-center">
             {navItems.map((item) => (
               <div key={item.label} className="relative group">
-                <Link
-                  href={item.href}
-                  className="text-gray-800 text-[13px] lg:text-[16px]  hover:text-[#FD7E14] px-2 lg:px-5 py-1 flex items-center  transition-all"
-                >
-                  {item.label}
-                </Link>
+                {item.subItems ? (
+                  <div className="text-gray-800 text-[13px] lg:text-[16px] font-semibold px-2 lg:px-5 py-1 flex items-center hover:text-[#FD7E14] transition-all cursor-pointer">
+                    {item.label}
+                  </div>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="text-gray-800 text-[13px] lg:text-[16px] font-semibold hover:text-[#FD7E14] px-2 lg:px-5 py-1 flex items-center transition-all"
+                  >
+                    {item.label}
+                  </Link>
+                )}
 
                 {/* DROPDOWN MENU */}
                 {item.subItems && (
@@ -112,21 +112,14 @@ export default function Header() {
               </div>
             ))}
           </nav>
+
           {/* FREE KUNDLI BUTTON */}
-          <div className="hidden ml-5 text-sm px-3 py-2 rounded-full text-white font-semibold  shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 md:flex items-center justify-center bg-gradient-to-r from-[#FD8115] to-[#FFCC33] hover:from-[#FFCC33] hover:to-[#FD8115]">
-            <Link href="/kundli/free" className="text-nowrap">
-              Get Free Kundli
-            </Link>
+          <div className="hidden ml-5 text-sm px-3 py-2 rounded-full text-white font-semibold shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 md:flex items-center justify-center bg-gradient-to-r from-[#FD8115] to-[#FFCC33] hover:from-[#FFCC33] hover:to-[#FD8115]">
+            <Link href="/kundli/free">Get Free Kundli</Link>
           </div>
 
           {/* MOBILE MENU BUTTON */}
-          <div className="md:hidden flex items-center justify-center gap-3">  
-             {/* FREE KUNDLI BUTTON */}
-          <div className=" ml-5 text-xs sm:text-sm px-3 py-1 rounded-4xl sm:rounded-full text-white font-semibold  shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 flex items-center justify-center bg-gradient-to-r from-[#FD8115] to-[#FFCC33] hover:from-[#FFCC33] hover:to-[#FD8115]">
-            <Link href="/kundli/free" className="">
-              Get Free Kundli
-            </Link>
-          </div>      
+          <div className="md:hidden flex items-center justify-center gap-3">
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="text-gray-800 hover:text-[#FD7E14] focus:outline-none"
@@ -137,7 +130,6 @@ export default function Header() {
                 <MenuIcon className="h-6 w-6" />
               )}
             </button>
-             
           </div>
         </div>
       </div>
@@ -154,7 +146,7 @@ export default function Header() {
                     item.subItems ? toggleSubMenu(item.label) : null
                   }
                 >
-                  <Link href={item.href}>{item.label}</Link>
+                  <span>{item.label}</span>
                   {item.subItems && (
                     <ChevronDownIcon
                       className={`w-5 h-5 text-gray-500 transform transition-transform ${
@@ -180,14 +172,6 @@ export default function Header() {
                 )}
               </div>
             ))}
-
-            {/* EXTRA BUTTON */}
-            <Link
-              href="/career"
-              className="block bg-gradient-to-r from-[#FD8115] to-[#FFCC33] text-white text-center font-bold px-4 py-2 rounded-full shadow-md hover:shadow-lg mt-3"
-            >
-              🚀 We’re Hiring
-            </Link>
           </div>
         </div>
       )}
