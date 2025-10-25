@@ -6,22 +6,17 @@ import { useState } from "react";
 
 const navItems = [
   { label: "Home", href: "/" },
-  {
-    label: "Kundli",
-    subItems: [
-      { label: "Free Kundli", href: "/kundli/free" },
-      { label: "Premium Kundli Report", href: "/kundli/premium" },
-      { label: "120 Year Dasha", href: "/kundli/120-year-dasha" },
-      { label: "Gemstone Suggestion", href: "/kundli/gemstone" },
-    ],
-  },
+
+    { label: "Kundli", href: "/pages/kundli/kundliCategory" },
   {
     label: "Horoscope",
     subItems: [
-      { label: "Today Horoscope", href: "/horoscope/today" },
-      { label: "Weekly Horoscope", href: "/horoscope/weekly" },
-      { label: "Monthly Horoscope", href: "/horoscope/monthly" },
-      { label: "Yearly Horoscope", href: "/horoscope/yearly" },
+      { label: "HoroScope", href: "/pages/horoscope/HoroScope" },
+      { label: "Today", href: "/pages/horoscope/today" },
+      { label: "Tomorrow", href: "/pages/horoscope/tomorrow" },
+      { label: "Yesterday", href: "/pages/horoscope/yesterday" },
+      { label: "Monthly", href: "/pages/horoscope/monthly" },
+      { label: "Yearly", href: "/pages/horoscope/yearly" },
     ],
   },
   {

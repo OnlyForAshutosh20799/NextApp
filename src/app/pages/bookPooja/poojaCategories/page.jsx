@@ -22,7 +22,7 @@ const categories = [
 ];
 
 const poojas = {
-  Navgraha: [
+  Navgraha : [
     {
       title: "Navgraha Shanti Puja",
       desc: "Appease the nine planets & bring harmony, positivity, and blessings into your life.",
