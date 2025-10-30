@@ -4,8 +4,10 @@ import Image from "next/image";
 import { useState, useMemo, useEffect, Suspense } from "react";
 import image from "../../../../../../public/assets/services/man.avif";
 import { useSearchParams } from "next/navigation";
+import { useRouter } from 'next/navigation';
 
 function AstrologerProfileListContent() {
+    const router = useRouter();
   const searchParams = useSearchParams();
   const type = searchParams.get("type");
   const [search, setSearch] = useState("");
@@ -79,6 +81,9 @@ function AstrologerProfileListContent() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [currentPage]);
+
+
+ 
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#FFF8E1] via-[#FFF3E0] to-[#FFECB3] py-16 px-6 mt-10">
@@ -196,6 +201,7 @@ function AstrologerProfileListContent() {
             </div>
 
             <motion.button
+               onClick={() => router.push(`/pages/astrology/astrologyProfile/profilePages`)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="mt-3 px-5 py-1.5 bg-gradient-to-r from-[#FD8115] to-[#FFCC33] text-white text-xs font-semibold rounded-full shadow-md hover:shadow-[#FFD54F]/70 transition-all"
