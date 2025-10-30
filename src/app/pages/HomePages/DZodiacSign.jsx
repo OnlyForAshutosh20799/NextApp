@@ -1,10 +1,13 @@
 "use client";
 import Head from "next/head";
 import { motion } from "framer-motion";
+import { useRouter } from 'next/navigation';
 
 export default function DZodiacSign() {
+   const router = useRouter();
   const zodiacSigns = [
     {
+      id: 1,
       name: "Aries",
       dates: "Mar 21 - Apr 19",
       tagline: "The Bold Trailblazer 🔥",
@@ -12,6 +15,7 @@ export default function DZodiacSign() {
       color: "from-red-500 to-orange-400",
     },
     {
+      id: 2,
       name: "Taurus",
       dates: "Apr 20 - May 20",
       tagline: "The Earthly Comfort Seeker 🌿",
@@ -19,6 +23,7 @@ export default function DZodiacSign() {
       color: "from-yellow-600 to-lime-400",
     },
     {
+      id: 3,
       name: "Gemini",
       dates: "May 21 - Jun 20",
       tagline: "The Dual Dreamer 💫",
@@ -26,6 +31,7 @@ export default function DZodiacSign() {
       color: "from-blue-500 to-cyan-400",
     },
     {
+      id: 4,
       name: "Cancer",
       dates: "Jun 21 - Jul 22",
       tagline: "The Gentle Guardian 🌙",
@@ -33,6 +39,7 @@ export default function DZodiacSign() {
       color: "from-pink-500 to-rose-400",
     },
     {
+      id: 5,
       name: "Leo",
       dates: "Jul 23 - Aug 22",
       tagline: "The Fearless Leader 🦁",
@@ -40,6 +47,7 @@ export default function DZodiacSign() {
       color: "from-orange-500 to-yellow-400",
     },
     {
+      id: 6,
       name: "Virgo",
       dates: "Aug 23 - Sep 22",
       tagline: "The Perfectionist Thinker 🌾",
@@ -47,6 +55,7 @@ export default function DZodiacSign() {
       color: "from-green-600 to-emerald-400",
     },
     {
+      id: 7,
       name: "Libra",
       dates: "Sep 23 - Oct 22",
       tagline: "The Balancer of Worlds ⚖️",
@@ -54,6 +63,7 @@ export default function DZodiacSign() {
       color: "from-purple-500 to-pink-500",
     },
     {
+      id: 8,
       name: "Scorpio",
       dates: "Oct 23 - Nov 21",
       tagline: "The Mysterious Transformer 🦂",
@@ -61,6 +71,7 @@ export default function DZodiacSign() {
       color: "from-red-700 to-purple-700",
     },
     {
+      id: 9,
       name: "Sagittarius",
       dates: "Nov 22 - Dec 21",
       tagline: "The Freedom Seeker 🏹",
@@ -68,6 +79,7 @@ export default function DZodiacSign() {
       color: "from-orange-400 to-amber-400",
     },
     {
+      id: 10,
       name: "Capricorn",
       dates: "Dec 22 - Jan 19",
       tagline: "The Ambitious Climber 🏔️",
@@ -75,6 +87,7 @@ export default function DZodiacSign() {
       color: "from-gray-700 to-slate-500",
     },
     {
+      id: 11,
       name: "Aquarius",
       dates: "Jan 20 - Feb 18",
       tagline: "The Visionary Innovator 🌊",
@@ -82,6 +95,7 @@ export default function DZodiacSign() {
       color: "from-blue-400 to-indigo-400",
     },
     {
+      id: 12,
       name: "Pisces",
       dates: "Feb 19 - Mar 20",
       tagline: "The Dreamy Healer 🐚",
@@ -89,6 +103,11 @@ export default function DZodiacSign() {
       color: "from-cyan-500 to-teal-400",
     },
   ];
+
+
+  const handleClick = (id) =>{
+     router.push(`/pages/horoscope/${id}`);
+  }
 
   return (
     <div className="relative bg-gradient-to-br from-[#FFF8E7] via-[#FFEAC7] to-[#FFD8A9] py-14 px-4 overflow-hidden">
@@ -142,7 +161,9 @@ export default function DZodiacSign() {
               <h3 className="text-lg font-bold text-gray-900">{sign.name}</h3>
               <p className="text-sm text-gray-600 mb-1">{sign.dates}</p>
               <p className="text-xs text-gray-500 italic mb-3">{sign.tagline}</p>
-              <button className="text-xs bg-gradient-to-r from-[#FD7E14] to-[#FFCA28] text-white px-3 py-1.5 rounded-full shadow hover:shadow-md hover:scale-105 transition-all duration-300">
+              <button
+               onClick={() => handleClick(sign.id)}
+              className="text-xs bg-gradient-to-r from-[#FD7E14] to-[#FFCA28] text-white px-3 py-1.5 rounded-full shadow hover:shadow-md hover:scale-105 transition-all duration-300">
                 Read Horoscope
               </button>
             </motion.div>

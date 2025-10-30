@@ -1,15 +1,34 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import FaqSection from "../resuableComponent/FaqSection";
 import HoroscopeHero from "../resuableComponent/HoroscopeHero";
+import { useParams, useRouter } from "next/navigation";
+import { Contact } from "lucide-react";
 
 const HoroscopePage = () => {
+  const { id } = useParams();
   const [activeTab, setActiveTab] = useState("Love");
   const [selectedZodiac, setSelectedZodiac] = useState("Aries");
 
+
+  useEffect(() => {
+    if (!id) return;
+    const byName = zodiacSigns.find(
+      (z) => z.name.toLowerCase() === id.toLowerCase()
+    );
+    const byId = zodiacSigns.find((z) => z.id.toString() === id.toString());
+
+    if (byName) {
+      setSelectedZodiac(byName.name);
+    } else if (byId) {
+      setSelectedZodiac(byId.name);
+    }
+  }, [id]);
+
   const zodiacSigns = [
     {
+      id: 1,
       name: "Aries",
       dates: "Mar 21 - Apr 19",
       tagline: "The Bold Trailblazer ",
@@ -17,6 +36,7 @@ const HoroscopePage = () => {
       color: "from-red-500 to-orange-400",
     },
     {
+      id: 2,
       name: "Taurus",
       dates: "Apr 20 - May 20",
       tagline: "The Earthly Comfort Seeker ",
@@ -24,6 +44,7 @@ const HoroscopePage = () => {
       color: "from-yellow-600 to-lime-400",
     },
     {
+      id: 3,
       name: "Gemini",
       dates: "May 21 - Jun 20",
       tagline: "The Dual Dreamer ",
@@ -31,6 +52,7 @@ const HoroscopePage = () => {
       color: "from-blue-500 to-cyan-400",
     },
     {
+      id: 4,
       name: "Cancer",
       dates: "Jun 21 - Jul 22",
       tagline: "The Gentle Guardian ",
@@ -38,6 +60,7 @@ const HoroscopePage = () => {
       color: "from-pink-500 to-rose-400",
     },
     {
+      id: 5,
       name: "Leo",
       dates: "Jul 23 - Aug 22",
       tagline: "The Fearless Leader ",
@@ -45,6 +68,7 @@ const HoroscopePage = () => {
       color: "from-orange-500 to-yellow-400",
     },
     {
+      id: 6,
       name: "Virgo",
       dates: "Aug 23 - Sep 22",
       tagline: "The Perfectionist Thinker ",
@@ -52,6 +76,7 @@ const HoroscopePage = () => {
       color: "from-green-600 to-emerald-400",
     },
     {
+      id: 7,
       name: "Libra",
       dates: "Sep 23 - Oct 22",
       tagline: "The Balancer of Worlds ",
@@ -59,6 +84,7 @@ const HoroscopePage = () => {
       color: "from-purple-500 to-pink-500",
     },
     {
+      id: 8,
       name: "Scorpio",
       dates: "Oct 23 - Nov 21",
       tagline: "The Mysterious Transformer ",
@@ -66,6 +92,7 @@ const HoroscopePage = () => {
       color: "from-red-700 to-purple-700",
     },
     {
+      id: 9,
       name: "Sagittarius",
       dates: "Nov 22 - Dec 21",
       tagline: "The Freedom Seeker ",
@@ -73,6 +100,7 @@ const HoroscopePage = () => {
       color: "from-orange-400 to-amber-400",
     },
     {
+      id: 10,
       name: "Capricorn",
       dates: "Dec 22 - Jan 19",
       tagline: "The Ambitious Climber ",
@@ -80,6 +108,7 @@ const HoroscopePage = () => {
       color: "from-gray-700 to-slate-500",
     },
     {
+      id: 11,
       name: "Aquarius",
       dates: "Jan 20 - Feb 18",
       tagline: "The Visionary Innovator ",
@@ -87,6 +116,7 @@ const HoroscopePage = () => {
       color: "from-blue-400 to-indigo-400",
     },
     {
+      id: 12,
       name: "Pisces",
       dates: "Feb 19 - Mar 20",
       tagline: "The Dreamy Healer ",
@@ -193,11 +223,10 @@ const HoroscopePage = () => {
   return (
     <main className="bg-white">
       <HoroscopeHero />
-
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-br from-amber-50 via-orange-25 to-white -z-10"></div>
+      {/* <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-br from-amber-50 via-orange-25 to-white -z-10"></div>
       <div className="absolute top-1/4 right-10 w-64 h-64 bg-amber-100 rounded-full blur-3xl opacity-30 -z-10"></div>
-      <div className="absolute bottom-1/4 left-10 w-48 h-48 bg-yellow-100 rounded-full blur-3xl opacity-40 -z-10"></div>
+      <div className="absolute bottom-1/4 left-10 w-48 h-48 bg-yellow-100 rounded-full blur-3xl opacity-40 -z-10"></div> */}
 
       <div className="relative min-h-screen bg-transparent text-gray-800 py-10 px-5">
         {/* Header */}
@@ -219,7 +248,10 @@ const HoroscopePage = () => {
           {zodiacSigns.map((zodiac) => (
             <div
               key={zodiac.name}
-              onClick={() => setSelectedZodiac(zodiac.name)}
+              onClick={() => {
+                setSelectedZodiac(zodiac.name);
+                router.push(`/horoscope/${zodiac.name}`); 
+              }}
               className={`group cursor-pointer transform transition-all duration-300 hover:scale-110 ${
                 selectedZodiac === zodiac.name ? "scale-110" : ""
               }`}

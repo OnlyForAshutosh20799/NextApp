@@ -12,11 +12,11 @@ const navItems = [
     label: "Horoscope",
     subItems: [
       { label: "HoroScope", href: "/pages/horoscope/HoroScope" },
-      { label: "Today", href: "/pages/horoscope/today" },
-      { label: "Tomorrow", href: "/pages/horoscope/tomorrow" },
-      { label: "Yesterday", href: "/pages/horoscope/yesterday" },
-      { label: "Monthly", href: "/pages/horoscope/monthly" },
-      { label: "Yearly", href: "/pages/horoscope/yearly" },
+      { label: "Periodic HoroScope", href: "/pages/horoscope/periodicHoroscope" },
+      // { label: "Tomorrow", href: "/pages/horoscope/tomorrow" },
+      // { label: "Yesterday", href: "/pages/horoscope/yesterday" },
+      // { label: "Monthly", href: "/pages/horoscope/monthly" },
+      // { label: "Yearly", href: "/pages/horoscope/yearly" },
     ],
   },
   {
@@ -30,7 +30,7 @@ const navItems = [
     ],
   },
   { label: "Book Pooja", href: "/pages/bookPooja/poojaCategories" },
-  { label: "Blog", href: "/blog" },
+  { label: "Blog", href: "/pages/blog" },
 ];
 
 export default function Header() {
