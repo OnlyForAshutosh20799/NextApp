@@ -1,6 +1,8 @@
 export default function FormSection() {
   return (
-    <section className="relative overflow-hidden py-20 bg-gradient-to-b from-[#FFF5E6] via-[#FFE7C2] to-[#FFD89A]">
+    <section
+    id="about"
+    className="relative overflow-hidden py-20 bg-gradient-to-b from-[#FFF5E6] via-[#FFE7C2] to-[#FFD89A]">
       {/* Decorative glows */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-[#f4b400]/20 to-transparent rounded-full blur-3xl"></div>
       <div className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-tr from-[#ff9900]/10 to-transparent rounded-full blur-3xl"></div>
