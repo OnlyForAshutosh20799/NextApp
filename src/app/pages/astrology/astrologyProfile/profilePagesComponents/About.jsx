@@ -14,7 +14,7 @@ const About = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image/Visual Section */}
-            <div className="">
+            <div className="hidden lg:block">
               <div className=" rounded-3xl p-8 shadow-xl">
                 <div className="">
                   <div className="aspect-square rounded-2xl flex items-center justify-center">
