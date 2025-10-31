@@ -6,8 +6,7 @@ import { useState } from "react";
 
 const navItems = [
   { label: "Home", href: "/" },
-
-    { label: "Kundli", href: "/pages/kundli/kundliCategory" },
+  { label: "Kundli", href: "/pages/kundli/kundliCategory" },
   {
     label: "Horoscope",
     subItems: [
@@ -95,7 +94,7 @@ export default function Header() {
 
           {/* FREE KUNDLI BUTTON */}
           <div className="hidden ml-5 text-sm px-3 py-2 rounded-full text-white font-semibold shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 md:flex items-center justify-center bg-gradient-to-r from-[#FD8115] to-[#FFCC33] hover:from-[#FFCC33] hover:to-[#FD8115]">
-            <Link href="/kundli/free">Get Free Kundli</Link>
+            <Link href="/pages/getFreeKundli/mainPage">Get Free Kundli</Link>
           </div>
 
           {/* MOBILE MENU BUTTON */}
