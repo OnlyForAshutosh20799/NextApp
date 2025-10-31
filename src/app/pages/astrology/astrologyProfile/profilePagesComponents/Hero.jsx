@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen pt-20 pb-16 bg-gradient-to-br from-[#FFF8E1] to-[#FFF3C4]"
+      className=" pt-20 pb-16 bg-gradient-to-br from-[#FFF8E1] to-[#FFF3C4]"
     >
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
