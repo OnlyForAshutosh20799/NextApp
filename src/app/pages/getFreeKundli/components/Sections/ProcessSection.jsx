@@ -38,7 +38,7 @@ export default function ProcessSection() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-extrabold mb-6">
+          <h2 className=" font-extrabold mb-6">
             <span className="bg-gradient-to-r from-[#d97706] via-[#f59e0b] to-[#fbbf24] bg-clip-text text-transparent text-[28px] md:text-[32px] lg:text-[48px] font-extrabold ">
               Your Journey to Self-Discovery
             </span>

@@ -9,8 +9,8 @@ export default function FormSection() {
         <div className="max-w-3xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
-              <span className="bg-gradient-to-r from-[#ff8c00] via-[#e6b800] to-[#ffcc33] bg-clip-text text-transparent">
+            <h2 className="  mb-4">
+              <span className="bg-gradient-to-r from-[#ff8c00] via-[#e6b800] to-[#ffcc33] bg-clip-text text-transparent text-[28px] md:text-[32px] lg:text-[48px] font-extrabold">
                 Unlock Your Cosmic Journey
               </span>
             </h2>

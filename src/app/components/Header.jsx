@@ -12,10 +12,6 @@ const navItems = [
     subItems: [
       { label: "HoroScope", href: "/pages/horoscope/HoroScope" },
       { label: "Periodic HoroScope", href: "/pages/horoscope/periodicHoroscope" },
-      // { label: "Tomorrow", href: "/pages/horoscope/tomorrow" },
-      // { label: "Yesterday", href: "/pages/horoscope/yesterday" },
-      // { label: "Monthly", href: "/pages/horoscope/monthly" },
-      // { label: "Yearly", href: "/pages/horoscope/yearly" },
     ],
   },
   {
@@ -92,8 +88,8 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* FREE KUNDLI BUTTON */}
-          <div className="hidden ml-5 text-sm px-3 py-2 rounded-full text-white font-semibold shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 md:flex items-center justify-center bg-gradient-to-r from-[#FD8115] to-[#FFCC33] hover:from-[#FFCC33] hover:to-[#FD8115]">
+          {/* DESKTOP "GET FREE KUNDLI" BUTTON */}
+          <div className="hidden md:flex ml-5 text-sm px-3 py-2 rounded-full text-white font-semibold shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 items-center justify-center bg-gradient-to-r from-[#FD8115] to-[#FFCC33] hover:from-[#FFCC33] hover:to-[#FD8115]">
             <Link href="/pages/getFreeKundli/mainPage">Get Free Kundli</Link>
           </div>
 
@@ -158,6 +154,17 @@ export default function Header() {
                 )}
               </div>
             ))}
+
+            {/* MOBILE "GET FREE KUNDLI" BUTTON */}
+            <div className="mt-4 text-center">
+              <Link
+                href="/pages/getFreeKundli/mainPage"
+                onClick={handleLinkClick}
+                className="inline-block text-sm px-5 py-2 rounded-full text-white font-semibold shadow-md bg-gradient-to-r from-[#FD8115] to-[#FFCC33] hover:from-[#FFCC33] hover:to-[#FD8115] transition-all duration-300"
+              >
+                Get Free Kundli
+              </Link>
+            </div>
           </div>
         </div>
       )}
