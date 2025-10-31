@@ -30,7 +30,7 @@ const SuccessStories = () => {
   return (
     <section
       id="success-stories"
-      className="py-20 bg-gradient-to-br from-gray-50 to-white"
+      className="py-20 bg-gradient-to-br from-[#FFF8E1] to-[#FFF3C4]"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}

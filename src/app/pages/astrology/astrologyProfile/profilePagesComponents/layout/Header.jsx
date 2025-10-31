@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { MdVerified } from "react-icons/md";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,13 +30,13 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div
-              className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg"
-              style={{ background: 'linear-gradient(to bottom right, #F4A300, #FFD700)' }}
+              className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg bg-gradient-to-l from-yellow-500 to-orange-500"
+            
             >
               <span className="text-white font-bold text-lg">MC</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-800">Manish Choudhary</h1>
+              <h1 className="text-xl font-bold text-gray-800 flex flex-row items-center justify-center gap-2">Manish Choudhary <span className='text-green-700 text-xs flex flex-row items-center justify-center gap-1'><MdVerified size={17}/> Verified </span></h1>
               <p className="text-xs font-medium" style={{ color: '#FFD700' }}>
                 Vedic Astrologer
               </p>
@@ -59,14 +60,6 @@ const Header = () => {
               </button>
             ))}
           </nav>
-
-          {/* CTA Button */}
-          <button
-            className="hidden md:block text-white px-6 py-2.5 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
-            style={{ background: 'linear-gradient(to right, #F4A300, #FFD700)' }}
-          >
-            Book Consultation
-          </button>
 
           {/* Mobile Menu Button */}
           <button

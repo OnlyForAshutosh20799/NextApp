@@ -20,17 +20,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4 text-golden-300">Quick Links</h3>
-            <ul className="space-y-2">
-              {['About', 'Services', 'Horoscope', 'Zodiac Signs', 'Consultation'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-gray-300 hover:text-saffron-300 transition-colors">{item}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* Contact */}
           <div>
@@ -45,8 +34,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Manish Choudhary Astrology. All rights reserved. | 
-            <span className="text-golden-300 ml-1">Powered by Cosmic Wisdom</span>
+            © 2024 Manish Choudhary Astrology. All rights reserved. 
           </p>
         </div>
       </div>

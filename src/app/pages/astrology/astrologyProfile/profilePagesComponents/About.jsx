@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 const About = () => {
   return (
@@ -14,15 +14,17 @@ const About = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image/Visual Section */}
-            <div className="relative">
-              <div className="bg-gradient-to-br from-[#FFF4D6] to-[#FFF8DC] rounded-3xl p-8 shadow-xl">
-                <div className="bg-white rounded-2xl p-6 shadow-lg">
-                  <div className="aspect-square bg-gradient-to-br from-[#FFF8E1] to-[#FFF4C3] rounded-2xl flex items-center justify-center">
+            <div className="">
+              <div className=" rounded-3xl p-8 shadow-xl">
+                <div className="">
+                  <div className="aspect-square rounded-2xl flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-32 h-32 bg-gradient-to-r from-[#F4A300] to-[#FFD700] rounded-full mx-auto mb-6 flex items-center justify-center shadow-2xl">
-                        <span className="text-white text-4xl">🙏</span>
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-800">
+                      <img
+                        src="https://plus.unsplash.com/premium_photo-1723701832228-ab221dbd3fd4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJpZXN0fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=700"
+                        alt="Astrologer Illustration"
+                        className="max-w-full w-[300px] lg:w-[400px] drop-shadow-xl md:h-[500px] rounded-lg shadow-2xl"
+                      />
+                      <h3 className="text-2xl font-bold text-gray-800 mt-5">
                         Manish Choudhary
                       </h3>
                       <p className="text-[#FFD700] font-semibold">
@@ -32,37 +34,38 @@ const About = () => {
                   </div>
                 </div>
               </div>
-
-              {/* Decorative Elements */}
-              <div className="absolute -top-6 -right-6 w-12 h-12 bg-[#F4A300] rounded-full opacity-20 animate-bounce"></div>
-              <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-[#FFD700] rounded-full opacity-20 animate-bounce delay-1000"></div>
             </div>
 
             {/* Content */}
             <div className="space-y-6">
-              <div className="bg-gradient-to-r from-[#F4A300] to-[#FFD700] text-white p-6 rounded-2xl shadow-lg">
+              <div className="bg-gradient-to-l from-yellow-500 to-orange-500 text-white p-6 rounded-2xl shadow-lg">
                 <h3 className="text-2xl font-bold mb-4">My Journey</h3>
                 <p className="leading-relaxed">
-                  With over 7 years of dedicated practice in Vedic astrology, I've helped
-                  thousands find clarity and direction. My approach combines ancient
-                  scriptures with practical modern applications.
+                  With over 7 years of dedicated practice in Vedic astrology,
+                  I've helped thousands find clarity and direction. My approach
+                  combines ancient scriptures with practical modern
+                  applications.
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-[#FFF8E1] p-4 rounded-xl border-l-4 border-[#F4A300]">
+                <div className="bg-[#FFF8E1] p-4 rounded-xl border-l-4 border-orange-400">
                   <h4 className="font-semibold text-gray-800 mb-2">
                     🎓 Qualifications
                   </h4>
-                  <p className="text-sm text-gray-600">Certified Vedic Astrologer</p>
+                  <p className="text-sm text-gray-600">
+                    Certified Vedic Astrologer
+                  </p>
                 </div>
-                <div className="bg-[#FFFBEA] p-4 rounded-xl border-l-4 border-[#FFD700]">
+                <div className="bg-[#FFFBEA] p-4 rounded-xl border-l-4 border-orange-400">
                   <h4 className="font-semibold text-gray-800 mb-2">
                     🌍 Languages
                   </h4>
-                  <p className="text-sm text-gray-600">Hindi, English, Rajasthani</p>
+                  <p className="text-sm text-gray-600">
+                    Hindi, English, Rajasthani
+                  </p>
                 </div>
-                <div className="bg-[#FFF8E1] p-4 rounded-xl border-l-4 border-[#F4A300]">
+                <div className="bg-[#FFF8E1] p-4 rounded-xl border-l-4 border-orange-400">
                   <h4 className="font-semibold text-gray-800 mb-2">
                     ⭐ Specialization
                   </h4>
@@ -70,19 +73,24 @@ const About = () => {
                     Career, Relationships, Finance
                   </p>
                 </div>
-                <div className="bg-[#FFFBEA] p-4 rounded-xl border-l-4 border-[#FFD700]">
+                <div className="bg-[#FFFBEA] p-4 rounded-xl border-l-4 border-orange-400">
                   <h4 className="font-semibold text-gray-800 mb-2">
                     📈 Success Rate
                   </h4>
-                  <p className="text-sm text-gray-600">98% Client Satisfaction</p>
+                  <p className="text-sm text-gray-600">
+                    98% Client Satisfaction
+                  </p>
                 </div>
               </div>
 
               <div className="bg-white border border-[#FFE680] p-6 rounded-2xl shadow-sm">
-                <h4 className="font-semibold text-gray-800 mb-3">My Philosophy</h4>
+                <h4 className="font-semibold text-gray-800 mb-3">
+                  My Philosophy
+                </h4>
                 <p className="text-gray-600 italic">
-                  "Astrology is not about predicting the future, but about understanding the
-                  present and making informed choices to shape your destiny."
+                  "Astrology is not about predicting the future, but about
+                  understanding the present and making informed choices to shape
+                  your destiny."
                 </p>
               </div>
             </div>

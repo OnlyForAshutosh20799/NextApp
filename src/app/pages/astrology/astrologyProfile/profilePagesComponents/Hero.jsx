@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-const Hero = () => {
+const Hero = () => {  
   return (
     <section
       id="home"
@@ -12,13 +12,13 @@ const Hero = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left">
-            <div className="inline-block bg-gradient-to-r from-[#F4A300] to-[#FFD700] text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 shadow-lg">
+            <div className="inline-block bg-gradient-to-l from-yellow-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 shadow-lg">
               🔮 Certified Vedic Astrologer
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight">
               Unlock Your
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#F4A300] to-[#FFD700]">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-l from-yellow-500 to-orange-500">
                 Cosmic Potential
               </span>
             </h1>
@@ -47,7 +47,7 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="bg-gradient-to-r from-[#F4A300] to-[#FFD700] text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <button className="bg-gradient-to-l from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105">
                 Book Consultation
               </button>
               <button className="border border-[#FFD700] text-[#F4A300] px-8 py-4 rounded-xl font-semibold hover:bg-[#FFF4D6] transition-all duration-300 hover:scale-105">
@@ -61,7 +61,7 @@ const Hero = () => {
             <img
               src="https://plus.unsplash.com/premium_photo-1723701832228-ab221dbd3fd4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJpZXN0fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=700"
               alt="Astrologer Illustration"
-              className="max-w-full w-[400px] lg:w-[500px] drop-shadow-xl"
+              className="max-w-full w-[300px] lg:w-[400px] drop-shadow-xl md:h-[500px] rounded-lg shadow-2xl"
             />
           </div>
         </div>

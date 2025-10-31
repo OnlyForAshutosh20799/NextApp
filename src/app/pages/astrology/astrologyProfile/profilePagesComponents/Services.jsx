@@ -35,7 +35,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-[#fff8ef] to-white">
+    <section id="services" className="py-20 bg-gradient-to-br from-[#FFF8E1] to-[#FFF3C4]">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -46,7 +46,7 @@ const Services = () => {
             Comprehensive astrology services tailored to your unique needs and
             life situations.
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#f4a300] to-[#e0a82d] mx-auto rounded-full mt-6"></div>
+          <div className="w-24 h-1 bg-gradient-to-l from-yellow-500 to-orange-500 mx-auto rounded-full mt-6"></div>
         </div>
 
         {/* Services Grid */}
@@ -57,7 +57,7 @@ const Services = () => {
               className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group overflow-hidden"
             >
               {/* Top Accent Bar */}
-              <div className="h-2 bg-gradient-to-r from-[#f4a300] to-[#e0a82d]"></div>
+              <div className="h-2 bg-gradient-to-l from-yellow-500 to-orange-500"></div>
 
               <div className="p-6">
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -82,7 +82,7 @@ const Services = () => {
                   ))}
                 </ul>
 
-                <button className="w-full bg-gradient-to-r from-[#f4a300] to-[#e0a82d] text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300">
+                <button className="w-full bg-gradient-to-l from-yellow-500 to-orange-500 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300">
                   Learn More
                 </button>
               </div>
@@ -91,7 +91,7 @@ const Services = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-20 bg-gradient-to-r from-[#f4a300] to-[#e0a82d] rounded-3xl p-10 text-center text-white shadow-xl">
+        <div className="mt-20 bg-gradient-to-l from-yellow-500 to-orange-500 rounded-3xl p-10 text-center text-white shadow-xl">
           <h3 className="text-2xl font-bold mb-4">
             Need Immediate Guidance?
           </h3>

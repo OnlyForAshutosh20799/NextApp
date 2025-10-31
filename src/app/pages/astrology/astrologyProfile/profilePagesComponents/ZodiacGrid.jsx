@@ -19,7 +19,7 @@ const ZodiacGrid = () => {
   ];
 
   return (
-    <section id="zodiac" className="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section id="zodiac" className="py-20 bg-gradient-to-b from-[#fff8ef] to-white">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Heading */}
         <div className="text-center mb-16">
