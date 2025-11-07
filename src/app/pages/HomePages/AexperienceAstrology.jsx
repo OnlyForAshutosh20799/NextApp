@@ -13,25 +13,31 @@ export default function AexperienceAstrology() {
 
   return (
     <div className="bg-gradient-to-r from-[#FFD700] via-[#FFD700] to-[#FF9933] flex flex-col md:flex-row items-center justify-between md:py-20 py-10 px-6 lg:px-16  shadow-lg mt-16 gap-10 md:gap-0 ">
-      
       {/* Left Content */}
       <div className=" text-center md:text-left flex flex-col items-center md:items-start justify-center w-full md:w-1/2 space-y-5">
-         <motion.h1
-         initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-         className="text-[28px] md:text-[32px] lg:text-[48px] font-extrabold text-[#5A3E00] leading-tight animate-slideIn drop-shadow-md">
-          Discover Divine Insights with <span className="text-[#FF6F00]">AstroVastuGuru</span>
-         </motion.h1>
+        <motion.h1
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-[28px] md:text-[32px] lg:text-[48px] font-extrabold text-[#5A3E00] leading-tight animate-slideIn drop-shadow-md"
+        >
+          Discover Divine Insights with{" "}
+          <span className="text-[#FF6F00]">AstroVastuGuru</span>
+        </motion.h1>
 
         <motion.p
-         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
-        className="text-black text-[16px] lg:text-[20px] font-medium max-w-lg leading-relaxed">
-          Unlock the secrets of your destiny through accurate <span className="text-[#FF6F00] font-semibold">Kundli</span>,
-          personalized <span className="text-[#FF6F00] font-semibold">Horoscopes</span>, and 
-          expert <span className="text-[#FF6F00] font-semibold">Vastu Guidance</span> — all in one place.
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="text-black text-[16px] lg:text-[20px] font-medium max-w-lg leading-relaxed"
+        >
+          Unlock the secrets of your destiny through accurate{" "}
+          <span className="text-[#FF6F00] font-semibold">Kundli</span>,
+          personalized{" "}
+          <span className="text-[#FF6F00] font-semibold">Horoscopes</span>, and
+          expert{" "}
+          <span className="text-[#FF6F00] font-semibold">Vastu Guidance</span> —
+          all in one place.
         </motion.p>
 
         {/* <div className="flex flex-col md:flex-row items-center gap-4">
@@ -58,11 +64,11 @@ export default function AexperienceAstrology() {
 
       {/* Right Image */}
       <motion.div
-       initial={{ opacity: 0, scale: 0.9, y: 30 }}
-  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-  transition={{ duration: 0.7, ease: "easeOut" }} // duration in seconds
-
-      className=" w-full md:w-1/2 flex justify-center md:justify-end relative">
+        initial={{ opacity: 0, scale: 0.9, y: 30 }}
+        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }} // duration in seconds
+        className=" w-full md:w-1/2 flex justify-center md:justify-end relative"
+      >
         <img
           src="/assets/VastuImage.png"
           alt="Astrology Illustration"

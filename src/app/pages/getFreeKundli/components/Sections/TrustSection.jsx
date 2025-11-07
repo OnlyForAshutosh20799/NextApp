@@ -9,7 +9,7 @@ export default function TrustSection() {
         {/* Header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-saffron-600 via-amber-600 to-yellow-600 bg-clip-text text-transparent text-[28px] md:text-[32px] lg:text-[48px]">
-            Why Trust <span className="text-amber-700">AstroGuide?</span>
+            Why Trust <span className="text-amber-700">AstroVastoGuru?</span>
           </h2>
           <p className="text-lg md:text-xl text-amber-800/90 max-w-3xl mx-auto leading-relaxed">
             We blend sacred Vedic wisdom with advanced analytics to give you authentic, life-changing astrological insights.

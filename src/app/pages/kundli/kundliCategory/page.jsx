@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useRouter } from "next/navigation";
 import poojaa from "../../../../../public/assets/services/lakshmiPooja.webp"
 const categories = [
   "Career Report",
@@ -70,7 +71,7 @@ const poojas = {
 const allPoojas = Object.values(poojas).flat();
 
 export default function PoojaBooking() {
-    console.log("flksdjflkds", poojaa)
+   const router = useRouter();
 
   const [selectedCategory, setSelectedCategory] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -91,6 +92,10 @@ export default function PoojaBooking() {
     setSelectedCategory(e.target.value);
     setCurrentPage(1);
   };
+
+  const handleClick =()=>{
+    router.push('/pages/kundli/kundliBookSelling/mainPageKundliBookSelling')
+  }
 
   return (
     <div className="mt-15 min-h-screen bg-gradient-to-br from-[#FFF8E1] via-[#FFF3E0] to-[#FFECB3] flex flex-col items-center px-4 py-10">
@@ -141,7 +146,9 @@ export default function PoojaBooking() {
                 <p className="text-gray-600 text-sm mb-4 line-clamp-3">
                   {pooja.desc}
                 </p>
-                <button className="w-full bg-gradient-to-r from-[#FD8115] to-[#FFCC33] text-white py-2 rounded-lg font-semibold shadow-md hover:scale-105 transform transition duration-300">
+                <button
+                onClick={handleClick}
+                className="w-full bg-gradient-to-r from-[#FD8115] to-[#FFCC33] text-white py-2 rounded-lg font-semibold shadow-md hover:scale-105 transform transition duration-300">
                   Book Now
                 </button>
               </div>
